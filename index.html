@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Herald</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero-container">
+
+        <header class="site-header">
+            <div class="container header-content">
+
+                <div class="logo">
+                    <a href="#">The Green Herald</a>
+                    </div>
+
+                <nav class="desktop-nav">
+                    <a href="#">Home</a>
+                    <a href="#announcements">Announcements</a>
+                    <a href="#weather">Weather</a>
+                    <a href="#events">Events</a>
+                    <a href="#calendar">Calendar</a>
+                    <a href="#news">News</a>
+                    <a href="#forum">Forum</a>
+                </nav>
+
+                <div class="mobile-menu-button">
+                    <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+
+            </div> </header> <div id="mobile-menu" class="mobile-menu-panel hidden">
+             <button id="close-btn" class="close-menu-button" aria-label="Close menu">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <nav class="mobile-nav">
+                <a href="#">Home</a>
+                <a href="#announcements">Announcements</a>
+                <a href="#weather">Weather</a>
+                <a href="#events">Events</a>
+                <a href="#calendar">Calendar</a>
+                <a href="#news">News</a>
+                <a href="#forum">Forum</a>
+                <a href="#lostfound">Lost & Found</a>
+            </nav>
+        </div> <main class="hero-content">
+            <h1 class="hero-title">
+                Everything CvSU
+            </h1>
+            <p class="hero-subtitle">
+                Your central hub for announcements, news, events, and community connections. Stay informed and engaged.
+            </p>
+
+            <div class="date-grid">
+                <div id="date-block-1" class="date-block">
+                    <div id="month-1" class="month">---</div>
+                    <div id="day-1" class="day">--</div>
+                    <div id="location-1" class="location">Loading...</div>
+                </div>
+                <div id="date-block-2" class="date-block">
+                    <div id="month-2" class="month">---</div>
+                    <div id="day-2" class="day">--</div>
+                    <div id="location-2" class="location">Loading...</div>
+                </div>
+                <div id="date-block-3" class="date-block">
+                     <div id="month-3" class="month">---</div>
+                    <div id="day-3" class="day">--</div>
+                    <div id="location-3" class="location">Loading...</div>
+                </div>
+                <div id="date-block-4" class="date-block">
+                     <div id="month-4" class="month">---</div>
+                    <div id="day-4" class="day">--</div>
+                    <div id="location-4" class="location">Loading...</div>
+                </div>
+                 <div id="date-block-5" class="date-block">
+                     <div id="month-5" class="month">---</div>
+                    <div id="day-5" class="day">--</div>
+                    <div id="location-5" class="location">Loading...</div>
+                </div>
+                 <div id="date-block-6" class="date-block">
+                     <div id="month-6" class="month">---</div>
+                    <div id="day-6" class="day">--</div>
+                    <div id="location-6" class="location">Loading...</div>
+                </div>
+                 <div id="date-block-7" class="date-block">
+                     <div id="month-7" class="month">---</div>
+                    <div id="day-7" class="day">--</div>
+                    <div id="location-7" class="location">Loading...</div>
+                </div>
+            </div> </main>
+            
+            <div class="l-header__info js-auto-scroll bottom-banner">
+                <p class="l-header__info__inner js-auto-scroll__inner">Loading data...</p>
+                <p class="l-header__info__inner js-auto-scroll__inner">Loading data...</p>
+                <p class="l-header__info__inner js-auto-scroll__inner">Loading data...</p>
+                <p class="l-header__info__inner js-auto-scroll__inner">Loading data...</p>
+            </div>
+
+    </div>
+    <!-- Kayo na bahala dito -->
+    <section id="announcements" class="content-section bg-light">
+        <div class="container">
+            <h2>Announcements</h2>
+            <p>Announcements</p>
+            </div>
+    </section>
+
+    <section id="weather" class="content-section bg-medium">
+        <div class="container">
+            <h2>Weather Update</h2>
+            <p>Weather</p>
+             </div>
+    </section>
+
+    <section id="events" class="content-section bg-light">
+        <div class="container">
+            <h2>Events & Activities</h2>
+            <p>Events</p>
+             </div>
+    </section>
+
+    <section id="calendar" class="content-section bg-medium">
+        <div class="container">
+            <h2>School Calendar</h2>
+            <p>Calendar</p>
+             </div>
+        </div>
+    </section>
+
+    <section id="news" class="content-section bg-light">
+        <div class="container">
+            <h2>News from the Gazette</h2>
+            <p>News</p>
+             </div>
+    </section>
+
+    <section id="forum" class="content-section bg-medium">
+        <div class="container">
+            <h2>Community Forum</h2>
+            <p>Forum</p>
+             </div>
+    </section>
+
+    <footer class="site-footer">
+         <p>© 2025 The Green Herald. All Rights Reserved.</p>
+     </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
