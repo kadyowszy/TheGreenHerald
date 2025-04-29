@@ -24,8 +24,8 @@
             units: 'metric'
         },
         news: [
-            { id: 1, headline: "Headline placeholder for the marquee", link: "#news-item-1" },
-            { id: 2, headline: "Second headline placeholder for the marquee", link: "#news-item-2" }
+            { id: 1, headline: "Placeholder headline for the marquee", link: "#news-item-1" },
+            { id: 2, headline: "Second placeholder headline for the marquee", link: "#news-item-2" }
         ],
         display: {
             maxEventsForHeroBlocks: 7,
@@ -128,7 +128,7 @@
 
     async function fetchCalendarEvents(calendarId) {
          if (!calendarId) return [];
-        if (!config.googleApiKey || config.googleApiKey === 'AIzaSyCnSSFVL8j2jYkfNFo7yPCFCO7yWkh5Pf0') { return []; }
+        if (!config.googleApiKey || config.googleApiKey === 'YOUR_GOOGLE_API_KEY') { return []; }
         const timeMin = new Date().toISOString();
         const apiUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${config.googleApiKey}&timeMin=${timeMin}&maxResults=${config.display.maxEventsToFetchPerCalendar}&singleEvents=true&orderBy=startTime`;
         try {
@@ -140,8 +140,8 @@
     }
 
     async function fetchWeatherData() {
-        if (!config.accuWeatherApiKey || config.accuWeatherApiKey === 'sFnPqC5sWxWuC2lBNpbsvGMZtbcug93n' ||
-            !config.weather.accuWeatherLocationKey || config.weather.accuWeatherLocationKey === '262691') {
+        if (!config.accuWeatherApiKey || config.accuWeatherApiKey === 'YOUR_ACCUWEATHER_API_KEY' ||
+            !config.weather.accuWeatherLocationKey || config.weather.accuWeatherLocationKey === 'YOUR_ACCUWEATHER_LOCATION_KEY') {
             console.warn(config.uiMessages.errorWeatherConfig); return null;
         }
         const locationKey = config.weather.accuWeatherLocationKey;
@@ -236,7 +236,7 @@
     }
 
     async function processCalendarData() {
-        if (!config.googleApiKey || config.googleApiKey === 'AIzaSyCnSSFVL8j2jYkfNFo7yPCFCO7yWkh5Pf0') {
+        if (!config.googleApiKey || config.googleApiKey === 'YOUR_GOOGLE_API_KEY') {
             console.warn("Google API Key not configured.");
             if (elements.calendarContainer) elements.calendarContainer.innerHTML = config.uiMessages.errorGoogleConfig;
             updateHeroDateBlocks([]);
@@ -290,7 +290,7 @@
     }
 
     async function initialize() {
-        console.log("The Green Herald script loading...");
+        console.log("The Green Herald script initializing...");
         setupMenuListeners();
         await Promise.allSettled([ processCalendarData(), processWeatherData() ]);
         updateMarqueeContent();
