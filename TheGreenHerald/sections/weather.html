@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Heralds - Weather</title>
+    <link rel="stylesheet" href="../styles/weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap">
+</head>
+<body>
+    <!-- Navigation nganiniyot -->
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon"><a href=""><img src="../assets/image 3.png"></img></a></div>
+                <div class="logo-text">The Green Heralds</div>
+            </div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Announcements</a>
+                <a href="weather.html" class="active">Weather</a>
+                <a href="#">Calendar</a>
+                <a href="news.html">News</a>
+                <a href="forums.html">Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <div class="weather-dashboard">
+                <!-- Weather Forecast Card -->
+                <div class="forecast-card">
+                    <div class="forecast-header">
+                        <h3 class="forecast-title">7 - DAY FORECAST</h3>
+                        <p class="forecast-today">TODAY</p>
+                        <div class="current-temp">39°</div>
+                    </div>
+
+                    <div class="forecast-list">
+                        <div class="forecast-item">
+                            <span class="temp">41°</span>
+                            <div class="date-info">
+                                <div class="day">FRI</div>
+                                <div class="date">MAY 09</div>
+                            </div>
+                        </div>
+
+                        <div class="forecast-item">
+                            <span class="temp">40°</span>
+                            <div class="date-info">
+                                <div class="day">SAT</div>
+                                <div class="date">MAY 10</div>
+                            </div>
+                        </div>
+
+                        <div class="forecast-item">
+                            <span class="temp">39°</span>
+                            <div class="date-info">
+                                <div class="day">SUN</div>
+                                <div class="date">MAY 11</div>
+                            </div>
+                        </div>
+
+                        <div class="forecast-item">
+                            <span class="temp">38°</span>
+                            <div class="date-info">
+                                <div class="day">MON</div>
+                                <div class="date">MAY 12</div>
+                            </div>
+                        </div>
+
+                        <div class="forecast-item">
+                            <span class="temp">40°</span>
+                            <div class="date-info">
+                                <div class="day">TUE</div>
+                                <div class="date">MAY 13</div>
+                            </div>
+                        </div>
+
+                        <div class="forecast-item last">
+                            <span class="temp">41°</span>
+                            <div class="date-info">
+                                <div class="day">WED</div>
+                                <div class="date">MAY 14</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Weather Display -->
+                <div class="main-weather">
+                    <div class="weather-title-row">
+                        <div class="weather-title">
+                            <h2 class="title-line1">How <span class="hot-text">Hot</span> is it</h2>
+                            <h2 class="title-line2">in CvSU?</h2>
+                            <p class="campus-text">MAIN CAMPUS</p>
+                        </div>
+                        <div class="sun-container">
+                            <div class="sun-icon">
+                                <div class="sun-center"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Conditions -->
+                    <div class="current-conditions">
+                        <h3 class="conditions-title">Current Conditions</h3>
+                        <div class="conditions-grid">
+                            <div class="condition-item">
+                                <div class="condition-icon"></div>
+                                <div class="condition-value">3</div>
+                                <div class="condition-label">UV INDEX</div>
+                            </div>
+                            <div class="condition-item">
+                                <div class="condition-icon"></div>
+                                <div class="condition-value">10</div>
+                                <div class="condition-label">WIND km/h</div>
+                            </div>
+                            <div class="condition-item">
+                                <div class="condition-icon"></div>
+                                <div class="condition-value">30<span class="percent">%</span></div>
+                                <div class="condition-label">CHANCE OF RAIN</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">© 2023 The Green Heralds. All Rights Reserved.</div>
+    </div>
+</body>
+</html>

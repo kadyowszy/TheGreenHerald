@@ -512,6 +512,19 @@ hr {
     font-size: 0.875rem;
 }
 
+.footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.2rem;
+    height: 1.5px;
+    background: #ffffff;
+    border-radius: 2px;
+    z-index: 2;
+}
+
 /* Responsive adjustments */
 @media (max-width: 767px) {
     .main-container {
