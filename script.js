@@ -23,7 +23,7 @@
             locationName: 'Indang',
             units: 'metric'
         },
-        newsDataPath: '../json/news_data.json',
+        newsDataPath: 'json/news_data.json',
         display: {
             maxEventsForHeroBlocks: 7,
             maxEventsToShowInList: 15,
@@ -213,7 +213,7 @@
         const newsHeadline = newsItem.headline || 'Latest News';
 
         if (newsId) {
-            return `<a href="../sections/article.html?id=${encodeURIComponent(newsId)}"><span class="latest-label">NEWS:</span> ${escapeHtml(newsHeadline)}</a>`;
+            return `<a href="sections/article.html?id=${encodeURIComponent(newsId)}"><span class="latest-label">NEWS:</span> ${escapeHtml(newsHeadline)}</a>`;
         }
         return `<a href="#"><span class="latest-label">NEWS:</span> ${escapeHtml(newsHeadline)} (ID missing)</a>`;
     }
@@ -231,7 +231,7 @@
             const feelsLikeTemp = Math.round(weatherData.feelsLike);
             feelsLikeString = `${desc ? ' ' : ', '} (Feels like ${feelsLikeTemp}${unit})`;
         }
-        return `<a href="../sections/weather.html"><span class="latest-label">WEATHER:</span> ${temp}${unit}${desc}${feelsLikeString}${locationName}</a>`;
+        return `<a href="sections/weather.html"><span class="latest-label">WEATHER:</span> ${temp}${unit}${desc}${feelsLikeString}${locationName}</a>`;
     }
 
     function updateMarqueeContent() {
@@ -258,7 +258,7 @@
         if (weatherHtml) {
             marqueeItemsHtml.push(weatherHtml);
         } else {
-            marqueeItemsHtml.push(`<a href="../sections/weather.html"><span class="latest-label">WEATHER:</span> Unavailable</a>`);
+            marqueeItemsHtml.push(`<a href="sections/weather.html"><span class="latest-label">WEATHER:</span> Unavailable</a>`);
         }
 
         const finalMarqueeHtmlContent = marqueeItemsHtml.join(config.display.marqueeSeparator);
@@ -370,7 +370,8 @@
                 return;
             }
 
-            const latestNewsItem = allNews.find(item => item.layout_category === "latest");
+            const latestNewsItem = allNews.length > 0 ? allNews[0] : null;
+
             appState.newsItems = latestNewsItem ? [latestNewsItem] : [];
         } catch (error) {
             console.error('Error processing news data:', error);
