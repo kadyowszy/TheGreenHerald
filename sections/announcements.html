@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- This path assumes announcements.css is in a 'styles' folder, one level up from the HTML file's location.
+         Adjust if your structure is different (e.g., "announcements.css" or "styles/announcements.css") -->
+    <link rel="stylesheet" href="../styles/announcements.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../sections/announcements.html"  class="active">Announcements</a>
+                <a href="../sections/calendar.html">Calendar</a>
+                <a href="../sections/news.html">News</a>
+                <a href="../sections/forums.html">Forum</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu-panel hidden">
+        <button id="close-btn" class="close-menu-button" aria-label="Close menu">
+            <i class="fas fa-times fa-lg"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="../index.html">Home</a>
+            <a href="../sections/announcements.html" class="active">Announcements</a>
+            <a href="../sections/calendar.html">Calendar</a>
+            <a href="../sections/news.html">News</a>
+            <a href="../sections/forums.html">Forum</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="announcements-hero">
+            <div class="container">
+                <h1>ANNOUNCEMENTS</h1>
+                <p>The Green Herald rolls out its latest roundup of upcoming announcements, staying true to its role as a reliable source for timely updates and forward movement.</p>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2 class="decorated-title-featured"><span>FEATURED</span></h2>
+        <div class="container">
+
+            <div class="featured-carousel-wrapper">
+                <div class="featured-carousel-navigation">
+                    <button class="featured-nav-arrow prev-arrow" aria-label="Previous announcement">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="featured-nav-arrow next-arrow" aria-label="Next announcement">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="featured-announcement-card">
+                    <div class="featured-item-slider"> 
+                        <img src="https://placehold.co/100x100/1E4D2B/FFFFFF?text=Featured" alt="Placeholder" class="featured-img" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/333333?text=Image+Not+Found';">
+                        <div class="featured-content">
+                            <h3><i class="fas fa-bullhorn"></i> <span>Title</span></h3>
+                            <p>Description</p>
+                            <div class="meta">
+                                <span>Date</span>
+                                <span>Category</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="loop-title-section">
+                 <h2 class="decorated-title-loop"> 
+                        <i class="fas fa-arrow-down title-arrow left-arrow"></i>
+                        <span>STAY IN THE LOOP</span>
+                        <i class="fas fa-arrow-down title-arrow right-arrow"></i>
+                </h2>
+        </section>
+        
+        <section class="search-filter-controls">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search announcement, events, or weather">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="filter-buttons">
+                    <div class="filter-dropdown-wrapper">
+                        <button class="filter-btn" id="category-filter-btn">All Categories <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-menu category-dropdown hidden">
+                            </div>
+                    </div>
+                    <div class="filter-dropdown-wrapper">
+                        <button class="sort-btn" id="sort-btn">Sort <i class="fas fa-sort"></i></button>
+                        <div class="dropdown-menu sort-dropdown hidden">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stay-in-loop-section">
+            <div class="container">
+                <div class="announcements-grid">
+                    <div class="announcement-card">
+                        <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Chikawa" alt="Chikawa" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Chikawa</h4>
+                            <p>Is the main character and protagonist of the Chiikawa-verse, they are best friends with Hachiware and Usagi. They spend much of their time hanging out together.</p>
+                            <div class="meta">
+                                <span>Posted: May 9, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/DAA520/212529?text=Rakko" alt="Rakko" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Rakko</h4>
+                            <p>Rakko is a strong sea otter who is good at討伐 (討伐 tōbatsu lit. subjugation work)* and other high-risk tasks.</p>
+                            <div class="meta">
+                                <span>Posted: May 11, 2025</span>
+                                <span>Category: News</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Hachiware" alt="Hachiware" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Hachiware</h4>
+                            <p>Is one of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Usagi and are often seen spending time with them on their daily adventures.</p>
+                            <div class="meta">
+                                <span>Posted: May 8, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/DAA520/212529?text=Usagi" alt="Usagi" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Usagi</h4>
+                            <p>One of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Hachiware and are often seen spending time with them on their daily adventures. Known for its energetic personality and tendency to shout "Yaha!"</p>
+                            <div class="meta">
+                                <span>Posted: May 9, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Chikawa" alt="Chikawa" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Chikawa</h4>
+                            <p>Is the main character and protagonist of the Chiikawa-verse, they are best friends with Hachiware and Usagi. They spend much of their time hanging out.</p>
+                            <div class="meta">
+                                <span>Posted: May 9, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/DAA520/212529?text=Rakko" alt="Rakko" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Rakko</h4>
+                            <p>Rakko is a strong sea otter who is good at討伐 (討伐 tōbatsu lit. subjugation work)* and other high-risk tasks.</p>
+                            <div class="meta">
+                                <span>Posted: May 11, 2025</span>
+                                <span>Category: News</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Hachiware" alt="Hachiware" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Hachiware</h4>
+                            <p>Is one of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Usagi and are often seen spending time with them on their daily adventures.</p>
+                            <div class="meta">
+                                <span>Posted: May 8, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                         <img src="https://placehold.co/400x200/DAA520/212529?text=Usagi" alt="Usagi" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="card-content">
+                            <h4>Usagi</h4>
+                            <p>One of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Hachiware and are often seen spending time with them on their daily adventures. Known for its energetic personality and tendency to shout "Yaha!"</p>                                 <div class="meta">
+                                <span>Posted: May 9, 2025</span>
+                                <span>Category: Announcement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>&copy; 2025 The Green Herald. All Rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/announcements.js"></script>
+</body>
+</html>

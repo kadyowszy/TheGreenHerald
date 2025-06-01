@@ -15,6 +15,7 @@
     --marquee-label: var(--university-gold);
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -53,12 +54,14 @@ button {
     color: inherit;
 }
 
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .hero-container {
     position: relative;
@@ -72,6 +75,7 @@ button {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 .site-header {
     position: absolute;
@@ -93,12 +97,24 @@ button {
     font-weight: 700;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
 .logo a {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--text-light);
 }
+
 .logo a:hover {
     color: var(--university-gold);
 }
+
+.logo a img {
+    text-decoration: none;
+    border: none;
+}
+
 .logo-image {
     height: 2.5rem;
     width: auto;
@@ -110,22 +126,31 @@ button {
     font-size: 0.875rem;
     font-weight: 500;
 }
+
 .desktop-nav a {
     color: var(--text-light);
     opacity: 0.9;
     padding: 0.5rem 0;
 }
+
 .desktop-nav a:hover {
     color: var(--university-gold);
     opacity: 1;
 }
 
+.desktop-nav :first-child {
+    color: var(--university-gold);
+    font-weight: 700;
+}
+
 .mobile-menu-button {
     display: block;
 }
+
 .mobile-menu-button button {
     padding: 0.5rem;
 }
+
 .mobile-menu-button button i {
     color: var(--text-light);
     font-size: 1.25rem;
@@ -146,9 +171,11 @@ button {
     transition: transform 0.3s ease-in-out;
     z-index: 20;
 }
+
 .mobile-menu-panel.visible {
     transform: translateX(0);
 }
+
 .mobile-menu-panel.hidden {
     transform: translateX(100%);
 }
@@ -159,13 +186,15 @@ button {
     right: 1rem;
     padding: 0.5rem;
 }
+
 .close-menu-button i {
     color: var(--text-light);
     font-size: 1.25rem;
     display: block;
 }
+
 .close-menu-button:hover i {
-     color: var(--university-gold);
+    color: var(--university-gold);
 }
 
 .mobile-nav {
@@ -175,15 +204,18 @@ button {
     margin-top: 2.5rem;
     font-size: 1.125rem;
 }
+
 .mobile-nav a {
     color: var(--text-light);
     opacity: 0.9;
     padding: 0.5rem 0;
 }
+
 .mobile-nav a:hover {
     color: var(--university-gold);
     opacity: 1;
 }
+
 
 .hero-content {
     flex-grow: 1;
@@ -211,6 +243,7 @@ button {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     opacity: 0.95;
 }
+
 
 .date-grid {
     display: grid;
@@ -268,6 +301,7 @@ button {
     display: none;
 }
 
+
 .l-header__info.bottom-banner {
     width: 100%;
     overflow: hidden;
@@ -316,6 +350,7 @@ button {
     margin-right: 0.5em;
 }
 
+
 .content-section {
     padding: 4rem 1rem;
     text-align: center;
@@ -331,24 +366,9 @@ button {
     background-color: var(--university-green);
     color: var(--text-light);
 }
+
 #announcements h2 {
-     color: var(--university-gold);
-}
-
-.content-section.bg-light {
-    background-color: var(--bg-light-section);
-    color: var(--text-dark);
-}
-.content-section.bg-light h2 {
-    color: var(--university-green);
-}
-
-.content-section.bg-medium {
-    background-color: var(--bg-medium-section);
-    color: var(--text-dark);
-}
-.content-section.bg-medium h2 {
-     color: var(--university-green);
+    color: var(--university-gold);
 }
 
 .calendar-list {
@@ -373,6 +393,7 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-left: 5px solid var(--university-gold);
 }
+
 .calendar-list li.holiday-event {
     border-left-color: #dc3545;
 }
@@ -396,6 +417,7 @@ button {
     color: #6c757d;
     margin-bottom: 0.5rem;
 }
+
 .calendar-list .event-location i {
     margin-right: 0.3em;
     width: 1em;
@@ -409,6 +431,7 @@ button {
     line-height: 1.5;
 }
 
+
 .site-footer {
     background-color: #143d22;
     color: rgba(248, 249, 250, 0.7);
@@ -418,25 +441,40 @@ button {
     border-top: 1px solid rgba(218, 165, 32, 0.2);
 }
 
+
 @media (min-width: 768px) {
     .desktop-nav { display: flex; }
     .mobile-menu-button { display: none; }
     .mobile-menu-panel { display: none; }
+
     .hero-title { font-size: 3.75rem; }
     .hero-subtitle { font-size: 1.25rem; }
-    .date-grid { grid-template-columns: repeat(4, 1fr); gap: 1.2rem; padding: 0; }
+
+    .date-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.2rem;
+        padding: 0;
+    }
+
     #date-block-5,
     #date-block-6,
     #date-block-7 {
         display: flex;
     }
+
     .l-header__info.bottom-banner { font-size: 1rem; }
+
     .content-section { padding: 5rem 1rem; }
     .content-section h2 { font-size: 2.25rem; }
 }
 
 @media (min-width: 1200px) {
     .hero-title { font-size: 4.5rem; }
-    .date-grid { grid-template-columns: repeat(7, 1fr); gap: 1rem; }
-     .content-section { padding: 6rem 1rem; }
+
+    .date-grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+    }
+
+    .content-section { padding: 6rem 1rem; }
 }

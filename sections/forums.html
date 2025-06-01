@@ -3,45 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CvSU Student Forum - The Green Heralds</title>
+    <title>Student Forums</title>
     <link rel="stylesheet" href="../styles/forums.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation ngani -->
-    <div class="header">
-        <div class="header-container">
+    <header class="page-header">
+        <div class="container header-content">
             <div class="logo">
-                <div class="logo-icon"><a href=""><img src="../assets/image 3.png"></img></a></div>
-                <div class="logo-text">The Green Heralds</div>
+                <a href="../index.html">
+                    <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
             </div>
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Announcements</a>
-                <a href="weather.html">Weather</a>
-                <a href="#">Calendar</a>
-                <a href="news.html">News</a>
-                <a href="forums.html" class="active">Forum</a>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../sections/announcements.html">Announcements</a>
+                <a href="../sections/calendar.html">Calendar</a>
+                <a href="../sections/news.html">News</a>
+                <a href="../sections/forums.html" class="active" >Forum</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button id="menu-btn" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
             </div>
         </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu-panel hidden">
+        <button id="close-btn" class="close-menu-button" aria-label="Close menu">
+            <i class="fas fa-times fa-lg"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="../index.html">Home</a>
+            <a href="../sections/announcements.html">Announcements</a>
+            <a href="../sections/calendar.html">Calendar</a>
+            <a href="../sections/news.html">News</a>
+            <a href="../sections/forums.html" class="active">Forum</a>
+        </nav>
     </div>
-    <div class="main-container">
+
+    <main class="main-container">
         <div class="layout-grid">
-            <!-- Left Sidebar -->
-            <div class="sidebar">
+            <aside class="sidebar">
                 <div class="sidebar-card">
-                    <!-- Search -->
-                    <div class="search-wrapper">
+                    <form role="search" class="search-wrapper">
                         <div class="search-container">
                             <i class="fas fa-search search-icon"></i>
-                            <input type="text" class="search-input" placeholder="Search forums...">
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+                            <input type="text" class="search-input" placeholder="Search forums..." aria-label="Search forums">
                         </div>
-                    </div>
+                    </form>
 
-                    <!-- Flairs -->
-                    <div class="flairs-section">
+                    <section class="flairs-section">
                         <h3 class="flairs-title">Flairs</h3>
                         <div class="flairs-container">
                             <div class="badge-row">
@@ -70,16 +84,14 @@
                                 <span class="badge badge-media">Media</span>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </div>
+            </aside>
 
-            <!-- Main Content -->
-            <div class="main-content">
-                <!-- Forum Header -->
-                <div class="forum-header">
+            <section class="main-content">
+                <header class="forum-header">
                     <div class="forum-header-left">
-                        <i class="fas fa-comments forum-icon"></i>
+                        <i class="fas fa-comments forum-icon" aria-hidden="true"></i>
                         <div class="forum-title-section">
                             <h1 class="forum-title">CvSU Student Forum</h1>
                             <p class="forum-subtitle">Your one-stop hub for rants, ideas, questions, and campus conversations</p>
@@ -87,58 +99,15 @@
                     </div>
                     <div class="forum-header-right">
                         <button class="new-thread-btn">+ Start a new thread</button>
-                        <i class="fas fa-bell bell-icon"></i>
-                        <div class="user-avatar">
-                            <span>U</span>
-                        </div>
+                        <i class="fas fa-bell bell-icon" aria-hidden="true"></i>
+                    <div class="user-avatar" aria-label="User menu">
+                        <img src="../assets/images/forums/pfp/arukuremu-pfp.jpg" alt="User Avatar" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1E4D2B/FFFFFF?text=U';">
                     </div>
-                </div>
-
-                <!-- Pinned Post -->
-                <div class="post-card pinned-post">
-                    <div class="post-content">
-                        <div class="post-pin-icon">📌</div>
-                        <div class="post-body">
-                            <div class="post-badges">
-                                <span class="badge badge-announcement">Announcement</span>
-                                <span class="badge badge-mod-post">Mod Post</span>
-                                <span class="badge badge-sticky">Sticky</span>
-                            </div>
-                            <h3 class="post-title">Sticky: Welcome to The Green Herald Forum! (Read before posting)</h3>
-                            <p class="post-text">
-                                Hello, CvSU fam! Before jumping into the discussions, please take a moment to read our community
-                                guidelines. Let's do our best to keep this space respectful, helpful, and fun for everyone!
-                            </p>
-                            <div class="post-footer">
-                                <div class="post-author">
-                                    <div class="author-avatar">
-                                        <span>A</span>
-                                    </div>
-                                    <span class="author-name">iamline</span>
-                                    <span class="post-timestamp">198 days ago</span>
-                                </div>
-                                <div class="post-engagement">
-                                    <div class="engagement-item">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        <span>162</span>
-                                    </div>
-                                    <div class="engagement-item">
-                                        <i class="fas fa-lock"></i>
-                                        <span>1 Reply</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                </header>
 
-                <hr>
-
-                <!-- Regular Posts -->
                 <div class="posts-list">
-                    
-                    <!-- Post 1 -->
-                    <div class="post-card">
+                    <article class="post-card">
                         <div class="post-content">
                             <div class="post-body">
                                 <div class="post-badges">
@@ -146,175 +115,96 @@
                                     <span class="badge badge-shady">Shady</span>
                                     <span class="badge badge-hot">Hot</span>
                                 </div>
-                                <h3 class="post-title">Sinetch itey: ##### ######### ############## #####</h3>
+                                <h3 class="post-title"><a href="#">Sinetch itey: ##### ######### ############## #####</a></h3>
                                 <p class="post-text">
                                     KAO GA → DONKI NI NACCHAU YOO II NISE GA → KENRI WO TOTTANDA I IYUII NAKUNATTE HOSHII BONNOU GA I
                                     DOUYARA IKINOBITE SHIMATIA, IKINOBITE SHIMATTANDA
                                 </p>
-                                <div class="post-footer">
+                                <footer class="post-footer">
                                     <div class="post-author">
-                                        <div class="author-avatar gray">
-                                            <span>A</span>
-                                        </div>
+                                        <div class="author-avatar gray" aria-hidden="true"><span>A</span></div>
                                         <span class="author-name">arukuremu</span>
-                                        <span class="post-timestamp">9 hours ago</span>
+                                        <span class="post-timestamp"><time datetime="2025-05-30T19:00:00Z">9 hours ago</time></span>
                                     </div>
                                     <div class="post-engagement">
-                                        <div class="engagement-item">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <span>32</span>
-                                        </div>
+                                        <div class="engagement-item"><i class="fas fa-thumbs-up" aria-hidden="true"></i><span>32 Likes</span></div>
                                         <span class="replies-count">17 Replies</span>
                                     </div>
-                                </div>
+                                </footer>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Post 2 -->
-                    <div class="post-card">
-                        <div class="post-content">
-                            <div class="post-body">
-                                <div class="post-badges">
-                                    <span class="badge badge-guides-tips">Guides/Tips</span>
-                                    <span class="badge badge-events">Events</span>
-                                </div>
-                                <h3 class="post-title">tips to find the hidden hachiware plushies around the campus!</h3>
-                                <p class="post-text">
-                                    hello! i made this guide specially for the cvsu the hunt event featuring hachiware and friends!
-                                    below are the guides on where you can find each hachiware plushies all around the campus. i've
-                                    categorized these by departments! please... <a href="#" class="read-more-link">Read more</a>
-                                </p>
-                                <div class="post-footer">
-                                    <div class="post-author">
-                                        <div class="author-avatar gray">
-                                            <span>T</span>
-                                        </div>
-                                        <span class="author-name">thunderelild</span>
-                                        <span class="post-timestamp">14 hours ago</span>
-                                    </div>
-                                    <div class="post-engagement">
-                                        <div class="engagement-item">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <span>64</span>
-                                        </div>
-                                        <span class="replies-count">21 Replies</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Post 3 -->
-                    <div class="post-card">
-                        <div class="post-content">
-                            <div class="post-body">
-                                <div class="post-badges">
-                                    <span class="badge badge-questions">Questions</span>
-                                    <span class="badge badge-unrelated">Unrelated to CvSU</span>
-                                </div>
-                                <h3 class="post-title">saber best teams? (har)</h3>
-                                <p class="post-text">
-                                    hi po, plano ko po ipull si saber sa 3.4. sino po best team nya?? kelangan nya po ba ng sunday o
-                                    okay lang si bronya/ sparkle?? ano rin po ba best build nya? help me build a team pls, nandito po sa
-                                    post yung pic sa mga characters ko. pakitingin... <a href="#" class="read-more-link">Read more</a>
-                                </p>
-                                <div class="post-footer">
-                                    <div class="post-author">
-                                        <div class="author-avatar gray">
-                                            <span>G</span>
-                                        </div>
-                                        <span class="author-name">gabbbbb</span>
-                                        <span class="post-timestamp">7 hours ago</span>
-                                    </div>
-                                    <div class="post-engagement">
-                                        <div class="engagement-item">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <span>21</span>
-                                        </div>
-                                        <span class="replies-count">13 Replies</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Post 4 -->
-                    <div class="post-card">
-                        <div class="post-content">
-                            <div class="post-body">
-                                <div class="post-badges">
-                                    <span class="badge badge-questions">Questions</span>
-                                    <span class="badge badge-academics">Academics</span>
-                                </div>
-                                <h3 class="post-title">Ano po 'yung "Good Life" sa STS ?????????? (1st year)</h3>
-                                <p class="post-text">
-                                    hi po, plano ko po ipull si saber sa 3.4. sino po best team nya?? kelangan nya po ba ng sunday o
-                                    okay lang si bronya/ sparkle?? ano rin po ba best build nya? help me build a team pls, nandito po sa
-                                    post yung pic sa mga characters ko. pakitingin... <a href="#" class="read-more-link">Read more</a>
-                                </p>
-                                <div class="post-footer">
-                                    <div class="post-author">
-                                        <div class="author-avatar gray">
-                                            <span>M</span>
-                                        </div>
-                                        <span class="author-name">mistahkurt</span>
-                                        <span class="post-timestamp">7 hours ago</span>
-                                    </div>
-                                    <div class="post-engagement">
-                                        <div class="engagement-item">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <span>18</span>
-                                        </div>
-                                        <span class="replies-count">16 Replies</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Post 5 -->
-                    <div class="post-card">
-                        <div class="post-content">
-                            <div class="post-body">
-                                <div class="post-badges">
-                                    <span class="badge badge-shady">Shady</span>
-                                    <span class="badge badge-anon-post">Anon Post</span>
-                                    <span class="badge badge-hot">Hot</span>
-                                </div>
-                                <h3 class="post-title">I'M SO ##### ###### ## INIT SA ########### DIT TAPOS ###### PA #### SA ###</h3>
-                                <p class="post-text">
-                                    HINDI KO NA KAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ANG INIT SA DIT
-                                    TULONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG bakit ayaw pa isuspend grabe omgggggggg bakit ganto nam...
-                                    <a href="#" class="read-more-link">Read more</a>
-                                </p>
-                                <div class="post-footer">
-                                    <div class="post-author">
-                                        <div class="author-avatar gray">
-                                            <span>A</span>
-                                        </div>
-                                        <span class="author-name">Anonymous Poster</span>
-                                        <span class="post-timestamp">14 hours ago</span>
-                                    </div>
-                                    <div class="post-engagement">
-                                        <div class="engagement-item">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <span>17</span>
-                                        </div>
-                                        <span class="replies-count">10 Replies</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
+            </section>
+
+            <aside class="trending-sidebar">
+                <section class="trending-card">
+                    <h3 class="trending-title"><span role="img" aria-label="Fire emoji">🔥</span> Trending Now</h3>
+                    <ul class="trending-list">
+                        <li class="trending-item">
+                            <a href="#">
+                                <span class="trending-item-title">CvSU Graduating</span>
+                                <span class="trending-item-meta">125 discussions</span>
+                            </a>
+                        </li>
+                        <li class="trending-item">
+                            <a href="#">
+                                <span class="trending-item-title">Saan po makikita yung SIS at Privacy Notice?</span>
+                                <span class="trending-item-meta">98 discussions</span>
+                            </a>
+                        </li>
+                        <li class="trending-item">
+                            <a href="#">
+                                <span class="trending-item-title">Ano ba yang hanep na good life nayan</span>
+                                <span class="trending-item-meta">77 discussions</span>
+                            </a>
+                        </li>
+                        <li class="trending-item">
+                            <a href="#">
+                                <span class="trending-item-title">shoutout nga pala sa kuyang taga-COMSCI na sobrang pogi</span>
+                                <span class="trending-item-meta">65 discussions</span>
+                            </a>
+                        </li>
+                         <li class="trending-item">
+                            <a href="#">
+                                <span class="trending-item-title">Best Study Spots in CvSU Indang</span>
+                                <span class="trending-item-meta">50 discussions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <div id="modalOverlay" class="modal-overlay hidden"></div>
+    <div id="newThreadModal" class="modal hidden">
+        <div class="modal-header">
+            <h2>Create New Thread</h2>
+            <button id="closeModalBtn" class="close-modal-btn" aria-label="Close new thread dialog">&times;</button>
+        </div>
+        <div class="modal-content">
+            <form id="newThreadForm">
+                <div class="form-group">
+                    <label for="newThreadTitle">Title</label>
+                    <input type="text" id="newThreadTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="newThreadContent">Content</label>
+                    <textarea id="newThreadContent" name="content" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Flair</label> <input type="hidden" id="newThreadFlair" name="flair" value="" required> <div class="modal-flairs-container" id="modalFlairsContainer" role="radiogroup" aria-labelledby="flairLabel">
+                        </div>
+                </div>
+                <button type="submit" class="btn-submit-thread">Post Thread</button>
+            </form>
         </div>
     </div>
+    <footer class="footer">
+        <p class="footer-text">© 2023 The Green Herald. All Rights Reserved.</p>
+    </footer>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">© 2023 The Green Heralds. All Rights Reserved.</div>
-    </div>
+    <script src="../scripts/forums.js"></script>
 </body>
 </html>

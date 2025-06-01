@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Green Heralds - News and Events</title>
-    <link rel="stylesheet" href="../styles/news.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap">
+    <title>News</title>
+    <link rel="stylesheet" href="../styles/news.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation ngani -->
-    <div class="header">
-        <div class="header-container">
+    <header class="page-header">
+        <div class="container header-content">
             <div class="logo">
-                <div class="logo-icon"><a href=""><img src="../assets/image 3.png"></img></a></div>
-                <div class="logo-text">The Green Heralds</div>
+                <a href="../index.html"> <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
             </div>
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Announcements</a>
-                <a href="weather.html">Weather</a>
-                <a href="#">Calendar</a>
-                <a href="news.html" class="active">News</a>
-                <a href="forums.html">Forum</a>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../sections/announcements.html">Announcements</a>
+                <a href="../sections/calendar.html">Calendar</a>
+                <a href="../sections/news.html" class="active">News</a>
+                <a href="../sections/forums.html">Forum</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button aria-label="Open menu" id="openMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
+    </header>
+
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <button class="close-menu-button" id="closeMenuBtn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="../index.html">Home</a>
+            <a href="../sections/announcements.html">Announcements</a>
+            <a href="../sections/calendar.html">Calendar</a>
+            <a href="../sections/news.html" class="active">News</a>
+            <a href="../sections/forums.html">Forum</a>
+        </nav>
     </div>
 
-    <!-- Banner ngani -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -34,7 +48,16 @@
                 <div class="hero-title">News and</div>
                 <div class="hero-title">Events</div>
             </div>
-            <button class="search-btn">🔍</button>
+            <button class="search-btn-icon" id="searchIconBtn" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="searchBarModal" class="search-bar-modal">
+            <div class="search-bar-content">
+                <input type="text" id="searchInput" placeholder="Search news...">
+                <button id="performSearchBtn" aria-label="Perform search"><i class="fas fa-search"></i></button>
+                <button id="closeSearchBtn" class="close-search-btn" aria-label="Close search">&times;</button>
+            </div>
         </div>
     </div>
 
@@ -43,18 +66,11 @@
             <div class="main-content">
                 <div class="featured-article">
                     <div class="section-title">Featured Article</div>
-                    <div class="article-card">
-                        <div class="image-box">
-                            <img src="https://via.placeholder.com/500x300/87CEEB/000000?text=Featured+Article" alt="Featured article illustration" class="article-image">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-title">Wow! Ang galing nila! Kahanga-hangang nilalang. Panoorin ang bidyong ito!</div>
-                            <div class="article-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
+                    <div id="featured-article-container">
+                        <p>Loading featured article...</p>
                     </div>
                 </div>
+
                 <div class="trending-news">
                     <div class="section-title">Trending News</div>
                     <div class="filter-tags">
@@ -62,30 +78,15 @@
                         <div class="tag">Cipher Events</div>
                         <div class="tag">Informative</div>
                     </div>
-                    <div class="article-card">
-                        <div class="image-box">
-                            <img src="https://via.placeholder.com/500x250/DDA0DD/000000?text=Trending+News" alt="Trending news" class="article-image">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-title">Ciphermeow</div>
-                            <div class="article-text">
-                                Ewan ko na po Lorem ipsum gusto ko ng jolibee 123 walang panty... MmmmmmwArt!! Onegai, kimi ga hoshi no, nagusamesasete.. Shake shake a no sainou de.. Naitsukenakya! Kareteshimau, nuretettai! Nee, ii deshou? NAmetotte nominoshitai nda-da-dateba
-                            </div>
-                        </div>
+                    <div id="trending-news-container">
+                        <p>Loading trending news...</p>
                     </div>
                 </div>
+
                 <div class="other-news section-block">
                     <div class="section-title">Other News</div>
-                    <div class="other-news-grid">
-                        <div class="image-box">
-                            <img src="https://via.placeholder.com/300x200/98FB98/000000?text=Other+News" alt="Other news" class="other-news-image">
-                        </div>
-                        <div>
-                            <div class="article-title">Tignan ang pogi tips ni Dan Heng ngayon sa CvSU Style Showdown!</div>
-                            <div class="article-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
+                    <div class="other-news-grid" id="other-news-grid-container">
+                        <p>Loading other news...</p>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
                                 <div class="event-day">6</div>
                             </div>
                             <div class="event-details">
-                                <div class="event-title">Mid-Year Graduation</div>
-                                <div class="event-desc">Graduation and other related activities.</div>
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
                             </div>
                         </div>
                         <div class="event-item">
@@ -109,8 +110,8 @@
                                 <div class="event-day">9</div>
                             </div>
                             <div class="event-details">
-                                <div class="event-title">Kasane TetoTETO</div>
-                                <div class="event-desc">May go 3 tayo o tayo nyo?</div>
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placecholder desc</div>
                             </div>
                         </div>
                         <div class="event-item">
@@ -119,8 +120,18 @@
                                 <div class="event-day">11</div>
                             </div>
                             <div class="event-details">
-                                <div class="event-title">Mid-Year Graduation</div>
-                                <div class="event-desc">Graduation and other related activities.</div>
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                         <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">11</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
                             </div>
                         </div>
                         <div class="event-item">
@@ -129,8 +140,8 @@
                                 <div class="event-day">11</div>
                             </div>
                             <div class="event-details">
-                                <div class="event-title">It's here.</div>
-                                <div class="event-desc">It's here it's here it's here it's here it's here it's here it's here it's here. Hehe.</div>
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
                             </div>
                         </div>
                         <div class="event-item">
@@ -139,54 +150,28 @@
                                 <div class="event-day">11</div>
                             </div>
                             <div class="event-details">
-                                <div class="event-title">Mid-Year Graduation</div>
-                                <div class="event-desc">Graduation and other related activities.</div>
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
                             </div>
                         </div>
-                        <div class="event-item">
-                            <div class="event-date">
-                                <div class="event-month">May</div>
-                                <div class="event-day">11</div>
-                            </div>
-                            <div class="event-details">
-                                <div class="event-title">Mid-Year Graduation</div>
-                                <div class="event-desc">Graduation and other related activities.</div>
-                            </div>
-                        </div>
-                        <a href="#" class="see-more">See more...</a>
+                        <a href="../sections/calendar.html" class="see-more">See more...</a>
                     </div>
-                    
                 </div>
                 <div class="latest-news section-block">
                     <div class="section-title">Latest News</div>
-                    <div class="latest-news-list">
-                        <div class="latest-news-item">
-                            <div class="image-box">
-                                <img src="https://via.placeholder.com/200x120/FFB6C1/000000?text=Happy+Birthday" alt="Latest news" class="latest-news-image">
-                            </div>
-                            <div class="latest-news-content">
-                                <div class="latest-news-title">Happy bday</div>
-                                <div class="latest-news-text">Maligayang kaarawan! Ikaw ay aking pimpinitahan sa Teto World Domination birthday!</div>
-                            </div>
-                        </div>
-                        <div class="latest-news-item">
-                            <div class="image-box">
-                                <img src="https://via.placeholder.com/200x120/FFB6C1/000000?text=Happy+Birthday" alt="Latest news" class="latest-news-image">
-                            </div>
-                            <div class="latest-news-content">
-                                <div class="latest-news-title">Happy bday</div>
-                                <div class="latest-news-text">Maligayang kaarawan! Ikaw ay aking pimpinitahan sa Teto World Domination birthday!</div>
-                            </div>
-                        </div>
+                    <div class="latest-news-list" id="latest-news-list-container">
+                        <p>Loading latest news...</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">© 2023 The Green Heralds. All Rights Reserved.</div>
-    </div>
-</body>
+    <footer class="page-footer">
+        <div class="container">
+            <p>&copy; 2025 The Green Herald. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/news.js"></script> </body>
 </html>
