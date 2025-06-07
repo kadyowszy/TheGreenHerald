@@ -287,104 +287,131 @@ button {
     text-transform: uppercase;
 }
 
-
-.featured-carousel-wrapper {
+/* === CAROUSEL STYLES START === */
+.featured-section {
     position: relative;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 3rem;
 }
 
-.featured-announcement-card {
-    background-color: var(--featured-card-new-bg);
-    border-radius: 8px;
+.featured-container {
+    position: relative;
     padding: 0;
-    border: 3px solid var(--university-gold);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.featured-carousel-wrapper {
+    background-color: transparent;
+    box-shadow: none;
     color: var(--text-dark);
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 1;
     overflow: hidden;
+    padding: 2rem 0;
 }
 
-.featured-carousel-navigation {
-    position: absolute;
-    width: 57%;
-    left: 21.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    height: auto;
-    z-index: 5;
-    pointer-events: none;
-}
-
-.featured-item-slider {
+.featured-carousel-track {
     display: flex;
     align-items: center;
-    padding: 1.25rem;
-    gap: 1.25rem;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
+    gap: 1.5rem;
+    transition: transform 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    will-change: transform;
+    min-height: 280px;
+    visibility: hidden;
+}
+
+.featured-card {
+    background-color: var(--featured-card-new-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 320px;
+    flex-shrink: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0.6;
+    transform: scale(0.85);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+}
+
+.featured-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.featured-card:hover {
+    transform: scale(0.9);
+}
+
+.featured-card.active:hover {
+    transform: scale(1.03);
 }
 
 .featured-img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 50%;
+    border: 3px solid var(--university-gold);
+    margin-bottom: 1rem;
     flex-shrink: 0;
-    border: 1px solid #333;
 }
 
 .featured-content {
     flex-grow: 1;
-    text-align: left;
 }
 
 .featured-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.4rem;
-    display: flex;
-    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .featured-content h3 i.fas.fa-bullhorn {
-    color: var(--text-dark);
-    margin-right: 0.5em;
-    font-size: 1em;
-    line-height: 1;
+    display: none;
 }
 
 .featured-content p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-dark);
     opacity: 0.85;
-    margin-bottom: 0.6rem;
-    line-height: 1.45;
+    margin-bottom: 1rem;
+    line-height: 1.5;
     font-weight: 400;
+    flex-grow: 0;
 }
 
 .featured-content .meta {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #555;
     opacity: 0.9;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-.featured-content .meta span:not(:last-child) {
-    margin-right: 0.8rem;
+.featured-carousel-navigation {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    z-index: 5;
+    pointer-events: none;
 }
 
 .featured-nav-arrow {
-    background-color: var(--featured-card-new-bg);
+    background-color: #fff;
     color: var(--text-dark);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,28 +419,53 @@ button {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    border: 2px solid var(--university-gold);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border: 2px solid var(--university-green);
     pointer-events: auto;
 }
 
 .featured-nav-arrow.prev-arrow {
-    left: -48px;
+    left: 0px;
 }
 
 .featured-nav-arrow.next-arrow {
-    right: -48px;
+    right: 0px;
 }
 
 .featured-nav-arrow:hover {
-    transform: translateY(-50%) scale(1.2);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .featured-nav-arrow i.fas {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1;
 }
+
+.featured-carousel-counter {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(248, 249, 250, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--university-gold);
+    transform: scale(1.2);
+}
+/* === CAROUSEL STYLES END === */
 
 
 .announcement-card {
@@ -724,72 +776,35 @@ footer {
         font-size: 0.8rem;
     }
 
-    .featured-carousel-wrapper {
-        padding-left: 10px;
-        padding-right: 10px;
+    /* Responsive Carousel */
+    .featured-carousel-track {
+        gap: 1rem;
+        min-height: 250px;
     }
-
-    .featured-announcement-card {
-        width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        overflow: hidden;
+    .featured-card {
+        width: 250px; /* Smaller cards on mobile */
     }
-
-    .featured-carousel-navigation {
-        width: 100%;
-        left: 0;
-    }
-
-    .featured-item-slider {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        gap: 0.75rem;
-    }
-
     .featured-img {
         width: 80px;
         height: 80px;
-        margin-bottom: 0.5rem;
     }
-
     .featured-content h3 {
-        font-size: 1.05rem;
-        justify-content: center;
+        font-size: 1rem;
     }
-
-    .featured-content h3 i.fas {
-        font-size: 0.85rem;
-        margin-right: 0.4em;
-    }
-
     .featured-content p {
-        font-size: 0.75rem;
-        line-height: 1.4;
-    }
-
-    .featured-content .meta {
-        font-size: 0.65rem;
-    }
-
-    .featured-nav-arrow {
-        width: 32px;
-        height: 32px;
-    }
-
-    .featured-nav-arrow.prev-arrow {
-        left: 5px;
-    }
-
-    .featured-nav-arrow.next-arrow {
-        right: 5px;
-    }
-
-    .featured-nav-arrow i.fas {
         font-size: 0.8rem;
     }
+    .featured-nav-arrow {
+        width: 38px;
+        height: 38px;
+    }
+    .featured-nav-arrow.prev-arrow {
+        left: -10px;
+    }
+    .featured-nav-arrow.next-arrow {
+        right: -10px;
+    }
+    /* End Responsive Carousel */
 
     .featured-section .decorated-title-featured {
         font-size: 1.3rem;

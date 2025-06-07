@@ -20,13 +20,27 @@
       "description": "The University First Year - Student Council is hosting a charity pageant for First Years.",
       "date": "2025-05-28",
       "category": "Event"
+    },
+    {
+      "imgSrc": "../assets/images/announcements/ufysc.jpg",
+      "title": "UFY-SC Charity King and Queen: A Pageant with a Purpose",
+      "description": "The University First Year - Student Council is hosting a charity pageant for First Years.",
+      "date": "2025-05-28",
+      "category": "Event"
+    },
+    {
+      "imgSrc": "../assets/images/announcements/ufysc.jpg",
+      "title": "UFY-SC Charity King and Queen: A Pageant with a Purpose",
+      "description": "The University First Year - Student Council is hosting a charity pageant for First Years.",
+      "date": "2025-05-28",
+      "category": "Event"
     }
   ],
   
   "announcements": [
     {
       "imgSrc": "https://placehold.co/500x300/cccccc/000000?text=Announcement+Image",
-      "title": "Placeholder",
+      "title": "Test",
       "description": "This is just a placeholder",
       "date": "2025-05-30",
       "category": "Official"

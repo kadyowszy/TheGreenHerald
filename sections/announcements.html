@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/gab/image 3.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../styles/announcements.css">
 </head>
@@ -61,9 +61,10 @@
 
         <section class="featured-section">
             <h2 class="decorated-title-featured"><span>FEATURED</span></h2>
-        <div class="container">
-
-            <div class="featured-carousel-wrapper">
+            <div class="featured-container">
+                <div class="featured-carousel-wrapper">
+                    <div class="featured-carousel-track"></div>
+                </div>
                 <div class="featured-carousel-navigation">
                     <button class="featured-nav-arrow prev-arrow" aria-label="Previous announcement">
                         <i class="fas fa-chevron-left"></i>
@@ -72,20 +73,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
-                <div class="featured-announcement-card">
-                    <div class="featured-item-slider"> 
-                        <img src="https://placehold.co/100x100/1E4D2B/FFFFFF?text=Featured" alt="Placeholder" class="featured-img" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/333333?text=Image+Not+Found';">
-                        <div class="featured-content">
-                            <h3><i class="fas fa-bullhorn"></i> <span>Title</span></h3>
-                            <p>Description</p>
-                            <div class="meta">
-                                <span>Date</span>
-                                <span>Category</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+                <div class="featured-carousel-counter"></div>
             </div>
         </section>
 
@@ -120,95 +108,7 @@
 
         <section class="stay-in-loop-section">
             <div class="container">
-                <div class="announcements-grid">
-                    <div class="announcement-card">
-                        <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Chikawa" alt="Chikawa" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Chikawa</h4>
-                            <p>Is the main character and protagonist of the Chiikawa-verse, they are best friends with Hachiware and Usagi. They spend much of their time hanging out together.</p>
-                            <div class="meta">
-                                <span>Posted: May 9, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/DAA520/212529?text=Rakko" alt="Rakko" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Rakko</h4>
-                            <p>Rakko is a strong sea otter who is good at討伐 (討伐 tōbatsu lit. subjugation work)* and other high-risk tasks.</p>
-                            <div class="meta">
-                                <span>Posted: May 11, 2025</span>
-                                <span>Category: News</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Hachiware" alt="Hachiware" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Hachiware</h4>
-                            <p>Is one of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Usagi and are often seen spending time with them on their daily adventures.</p>
-                            <div class="meta">
-                                <span>Posted: May 8, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/DAA520/212529?text=Usagi" alt="Usagi" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Usagi</h4>
-                            <p>One of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Hachiware and are often seen spending time with them on their daily adventures. Known for its energetic personality and tendency to shout "Yaha!"</p>
-                            <div class="meta">
-                                <span>Posted: May 9, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Chikawa" alt="Chikawa" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Chikawa</h4>
-                            <p>Is the main character and protagonist of the Chiikawa-verse, they are best friends with Hachiware and Usagi. They spend much of their time hanging out.</p>
-                            <div class="meta">
-                                <span>Posted: May 9, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/DAA520/212529?text=Rakko" alt="Rakko" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Rakko</h4>
-                            <p>Rakko is a strong sea otter who is good at討伐 (討伐 tōbatsu lit. subjugation work)* and other high-risk tasks.</p>
-                            <div class="meta">
-                                <span>Posted: May 11, 2025</span>
-                                <span>Category: News</span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/1E4D2B/FFFFFF?text=Hachiware" alt="Hachiware" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Hachiware</h4>
-                            <p>Is one of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Usagi and are often seen spending time with them on their daily adventures.</p>
-                            <div class="meta">
-                                <span>Posted: May 8, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-card">
-                         <img src="https://placehold.co/400x200/DAA520/212529?text=Usagi" alt="Usagi" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
-                        <div class="card-content">
-                            <h4>Usagi</h4>
-                            <p>One of the main characters in the Chiikawa-verse, they are best friends with Chiikawa and Hachiware and are often seen spending time with them on their daily adventures. Known for its energetic personality and tendency to shout "Yaha!"</p>                                 <div class="meta">
-                                <span>Posted: May 9, 2025</span>
-                                <span>Category: Announcement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="announcements-grid"></div>
             </div>
         </section>
     </main>
