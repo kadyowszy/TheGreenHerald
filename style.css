@@ -106,10 +106,6 @@ button {
     color: var(--text-light);
 }
 
-.logo a:hover {
-    color: var(--university-gold);
-}
-
 .logo a img {
     text-decoration: none;
     border: none;
