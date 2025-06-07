@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details - Student Forums</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/forumpost.css">
+    <link rel="icon" href="../assets/images/gab/image 3.png" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../sections/announcements.html">Announcements</a>
+                <a href="../sections/calendar.html">Calendar</a>
+                <a href="../sections/news.html">News</a>
+                <a href="../sections/forums.html" class="active">Forum</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button id="menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></button>
+            </div>
+        </div>
+    </header>
+    <div id="mobile-menu" class="mobile-menu-panel hidden">
+    </div>
+
+    <main class="main-container">
+        <a href="forums.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Forums</a>
+
+        <div id="post-detail-wrapper">
+            <p id="loading-message">Loading post details...</p>
+            <p id="error-message" style="display:none;">Could not load post. It might not exist or there was an error.</p>
+        </div>
+
+        <section class="comments-section">
+            <h3>Comments</h3>
+            
+            <div id="comment-form-container">
+            </div>
+
+            <div id="comments-list">
+                <p>Loading comments...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">© 2025 The Green Herald. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../scripts/forumpost.js"></script>
+</body>
+</html>

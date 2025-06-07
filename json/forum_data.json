@@ -1,0 +1,67 @@
+[
+    {
+        "id": "forum-pinned1",
+        "title": "Sticky: Welcome to The Green Herald Forum! (Read before posting)",
+        "content": "Hello, CvSU fam! Before jumping into the discussions, please take a moment to read our community guidelines. Let's do our best to keep this space respectful, helpful, and fun for everyone!",
+        "flair": "Announcement",
+        "customBadges": [ {"text": "Mod Post"}, {"text": "Sticky"}],
+        "author": "smllnce",
+        "avatarChar": "S",
+        "avatarImageUrl": "../assets/images/forums/pfp/smllnce-pfp.jpg",
+        "datetime": "2024-11-15T10:00:00Z",
+        "timeAgo": "198 days ago",
+        "likes": 162,
+        "replies": 1,
+        "isLocked": true,
+        "isPinned": true,
+        "comments": [
+            { "author": "kadyowszy", "text": "talaga nga namang talaga oh", "timestamp": "197 days ago"}
+        ]
+    },
+    {
+        "id": "forum-post1",
+        "title": "Sinetch itey: ##### ######### ############## #####",
+        "content": "KAO GA → DONKI NI NACCHAU YOO II NISE GA → KENRI WO TOTTANDA I IYUII NAKUNATTE HOSHII BONNOU GA I DOUYARA IKINOBITE SHIMATIA, IKINOBITE SHIMATTANDA",
+        "flair": "Fluff/Meme",
+        "customBadges": [{"text": "Shady"}, {"text": "Hot"}],
+        "author": "arukuremu",
+        "avatarChar": "A",
+        "avatarImageUrl": "../assets/images/forums/pfp/arukuremu-pfp.jpg",
+        "datetime": "2025-05-30T19:00:00Z",
+        "timeAgo": "9 hours ago",
+        "likes": 32,
+        "replies": 4,
+        "isLocked": false,
+        "isPinned": false,
+        "comments": [
+             { "author": "Teto_Lover412", "text": "teto teto teto", "timestamp": "8 hours ago"},
+             { "author": "jckie", "text": "Ha?", "timestamp": "7 hours ago"},
+             { "author": "Hoshiga", "text": "Miku number 1", "timestamp": "7 hours ago"},
+             { "author": "josphh1", "text": "Teto concert ph when?", "timestamp": "7 hours ago"}
+        ]
+    },
+    {
+        "id": "forum-post2",
+        "title": "tips to find the hidden hachiware plushies around the campus!",
+        "content": "hello! i made this guide specially for the cvsu the hunt event featuring hachiware and friends! below are the guides on where you can find each hachiware plushies all around the campus. i've categorized these by departments!",
+        "flair": "Guides/Tips",
+        "customBadges": [{"text": "Events"}, {"text": "Hot"}],
+        "author": "thundereeiid",
+        "avatarChar": "T",
+        "avatarImageUrl": "../assets/images/forums/pfp/thundereeiid-pfp.jpg",
+        "datetime": "2025-05-30T14:00:00Z",
+        "timeAgo": "14 hours ago",
+        "likes": 64,
+        "replies": 6,
+        "isLocked": false,
+        "isPinned": false,
+        "comments": [
+             { "author": "kitkat", "text": "Thank you!!", "timestamp": "8 hours ago"},
+             { "author": "thundereeiid", "text": "You're welcome ^^", "timestamp": "8 hours ago"},
+             { "author": "veevee", "text": "thank u!", "timestamp": "7 hours ago"},
+             { "author": "Komii", "text": "Mahirap daw po balita ko :(", "timestamp": "7 hours ago"},
+             { "author": "Rei", "text": "Ano daw po ang prices? will register", "timestamp": "7 hours ago"},
+             { "author": "jhedisaur", "text": "tnk u!", "timestamp": "7 hours ago"}
+        ]
+    }
+]

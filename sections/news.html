@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="../styles/news.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="../assets/images/gab/image 3.png" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html"> <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a>
+                <a href="../sections/announcements.html">Announcements</a>
+                <a href="../sections/calendar.html">Calendar</a>
+                <a href="../sections/news.html" class="active">News</a>
+                <a href="../sections/forums.html">Forum</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button aria-label="Open menu" id="openMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <button class="close-menu-button" id="closeMenuBtn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="../index.html">Home</a>
+            <a href="../sections/announcements.html">Announcements</a>
+            <a href="../sections/calendar.html">Calendar</a>
+            <a href="../sections/news.html" class="active">News</a>
+            <a href="../sections/forums.html">Forum</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div>
+                <div class="hero-title">News and</div>
+                <div class="hero-title">Events</div>
+            </div>
+            <button class="search-btn-icon" id="searchIconBtn" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="searchBarModal" class="search-bar-modal">
+            <div class="search-bar-content">
+                <input type="text" id="searchInput" placeholder="Search news...">
+                <button id="performSearchBtn" aria-label="Perform search"><i class="fas fa-search"></i></button>
+                <button id="closeSearchBtn" class="close-search-btn" aria-label="Close search">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="featured-article">
+                    <div class="section-title">Featured Article</div>
+                    <div id="featured-article-container">
+                        <p>Loading featured article...</p>
+                    </div>
+                </div>
+
+                <div class="trending-news">
+                    <div class="section-title">Trending News</div>
+                    <div class="filter-tags">
+                        <div class="tag active">Must-see</div>
+                        <div class="tag">Cipher Events</div>
+                        <div class="tag">Informative</div>
+                    </div>
+                    <div id="trending-news-container">
+                        <p>Loading trending news...</p>
+                    </div>
+                </div>
+
+                <div class="other-news section-block">
+                    <div class="section-title">Other News</div>
+                    <div class="other-news-grid" id="other-news-grid-container">
+                        <p>Loading other news...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="upcoming-events section-block">
+                    <div class="section-title">Upcoming Events</div>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">6</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">9</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placecholder desc</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">11</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                         <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">11</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">11</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="event-month">May</div>
+                                <div class="event-day">11</div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-title">Placeholder title</div>
+                                <div class="event-desc">Placeholder desc</div>
+                            </div>
+                        </div>
+                        <a href="../sections/calendar.html" class="see-more">See more...</a>
+                    </div>
+                </div>
+                <div class="latest-news section-block">
+                    <div class="section-title">Latest News</div>
+                    <div class="latest-news-list" id="latest-news-list-container">
+                        <p>Loading latest news...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>© 2025 The Green Herald. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/news.js" defer></script> </body>
+</html>

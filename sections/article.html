@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article name</title> <link rel="stylesheet" href="../styles/news.css"> <link rel="stylesheet" href="../styles/article.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <link rel="icon" href="../assets/images/gab/image 3.png" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html"> 
+                    <img src="../assets/images/gab/image 3.png" alt="The Green Heralds Logo" style="height: 40px; vertical-align: middle; margin-right: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/100x40/1E4D2B/FFFFFF?text=Logo';">The Green Herald
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="../index.html">Home</a> 
+                <a href="../sections/announcements.html">Announcements</a> 
+                <a href="../sections/calendar.html">Calendar</a> 
+                <a href="../sections/news.html">News</a> 
+                <a href="../sections/forums.html">Forum</a> 
+            </nav>
+            <div class="mobile-menu-button">
+                <button aria-label="Open menu" id="openMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <button class="close-menu-button" id="closeMenuBtn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="../index.html">Home</a> 
+            <a href="../sections/announcements.html">Announcements</a> 
+            <a href="../sections/calendar.html">Calendar</a> 
+            <a href="../sections/news.html">News</a> 
+            <a href="../sections/forums.html">Forum</a> 
+        </nav>
+    </div>
+
+    <main class="article-page-container main-container">
+        <article id="full-article-content">
+            <h1 id="article-headline" class="article-page-title">Placeholder headline</h1>
+            
+            <div class="article-meta">
+                <span id="article-author" class="meta-item">By Placeholder Author</span>
+                <span id="article-date" class="meta-item">May 30, 2025</span>
+                <span id="article-category" class="meta-item">Placeholder Category</span>
+            </div>
+            
+            <figure class="article-image-container">
+                <img id="article-image" src="../assets/images/articles/image_3100bc.jpg" alt="Mga Kahanga-hangang Nilalang sa CVSU" class="article-main-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/969696?text=Image+Not+Found';this.alt='Image not found, placeholder shown.';">
+            </figure>
+            
+            <div id="article-body" class="article-full-body">
+                <p>Placeholder desc</p>
+            </div>
+            
+            <div id="article-tags-container" class="article-tags-section">
+                <strong>Tags:</strong> 
+                <span id="article-tags">
+                    <span class="tag-item">Honkai: Star Rail</span>
+                    <span class="tag-item">Version 3.2</span>
+                    <span class="tag-item">Update</span>
+                </span>
+            </div>
+        </article>
+        
+        <p id="article-not-found" style="display: none; text-align: center; margin-top: 2rem; font-size: 1.2rem;">
+            The article you are looking for could not be found.
+        </p>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>© 2025 The Green Herald. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/article.js"></script>
+</body>
+</html>
