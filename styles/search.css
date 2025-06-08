@@ -102,3 +102,135 @@ body {
         padding: 0 1.5rem;
     }
 }
+
+@media (min-width: 1920px) {
+    .search-results-page-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #search-query-display.page-title {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+
+    .search-result-card {
+        border-radius: 12px;
+    }
+
+    .search-result-card .image-box {
+        height: 250px;
+    }
+
+    .search-result-card .article-content-wrapper {
+        padding: 1.5rem 1.75rem;
+    }
+
+    .search-result-card .article-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .search-result-card .article-text {
+        font-size: 1.2rem;
+    }
+
+    #no-results-message {
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .search-results-page-container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #search-query-display.page-title {
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 4rem;
+        padding: 0 3rem;
+    }
+
+    .search-result-card {
+        border-radius: 16px;
+    }
+
+    .search-result-card .image-box {
+        height: 320px;
+    }
+
+    .search-result-card .article-content-wrapper {
+        padding: 2rem 2.25rem;
+    }
+
+    .search-result-card .article-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .search-result-card .article-text {
+        font-size: 1.4rem;
+    }
+
+    #no-results-message {
+        font-size: 1.8rem;
+        padding: 4rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    .search-results-page-container {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    #search-query-display.page-title {
+        font-size: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+        gap: 6rem;
+        padding: 0 4rem;
+    }
+
+    .search-result-card {
+        border-radius: 24px;
+    }
+
+    .search-result-card .image-box {
+        height: 450px;
+    }
+
+    .search-result-card .article-content-wrapper {
+        padding: 3rem 3.5rem;
+    }
+
+    .search-result-card .article-title {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .search-result-card .article-text {
+        font-size: 1.8rem;
+    }
+
+    #no-results-message {
+        font-size: 2.5rem;
+        padding: 6rem;
+    }
+}

@@ -43,6 +43,8 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -207,6 +209,7 @@ button {
     max-width: 1535px;
     margin: 0 auto;
     padding: 1.5rem 1rem;
+    flex: 1 0 auto;
 }
 
 .layout-grid {
@@ -874,9 +877,23 @@ footer.footer {
     padding: 15px 1rem;
     font-size: clamp(0.8em, 2.5vw, 0.85em);
     border-top: 3px solid var(--university-gold);
-    margin-top: 3rem;
+    width: 100%;
+    margin-top: 2rem;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
 
 @media (min-width: 768px) {
     .desktop-nav {
@@ -968,5 +985,188 @@ footer.footer {
     .post-engagement {
         width: 100%;
         justify-content: space-between;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1800px;
+    }
+    .forum-title {
+        font-size: 2.5rem;
+    }
+    .forum-icon {
+        font-size: 3rem;
+    }
+    .new-thread-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    .bell-icon {
+        font-size: 2rem;
+    }
+    .user-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    .post-title {
+        font-size: 1.15rem;
+    }
+    .post-text, .author-name, .post-timestamp, .engagement-item, .replies-count {
+        font-size: 0.95rem;
+    }
+    .author-avatar {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.85rem;
+    }
+    .trending-title {
+        font-size: 1.25rem;
+    }
+    .trending-item-title {
+        font-size: 1rem;
+    }
+    .trending-item-meta {
+        font-size: 0.8rem;
+    }
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    .form-group input[type="text"], .form-group textarea {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    .btn-submit-thread {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 2200px;
+    }
+    .forum-title {
+        font-size: 1.5rem;
+    }
+    .forum-subtitle {
+        font-size: 0.9rem;
+    }
+    .forum-icon {
+        font-size: 3.5rem;
+    }
+    .new-thread-btn {
+        padding: 1.2rem 1rem;
+        font-size: 1.1rem;
+    }
+    .bell-icon {
+        font-size: 2.25rem;
+    }
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .post-title {
+        font-size: 1.3rem;
+    }
+    .post-text, .author-name, .post-timestamp, .engagement-item, .replies-count {
+        font-size: 1rem;
+    }
+    .author-avatar {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+    .trending-title {
+        font-size: 1.4rem;
+    }
+    .trending-item-title {
+        font-size: 1.1rem;
+    }
+    .trending-item-meta {
+        font-size: 0.85rem;
+    }
+    .modal-header h2 {
+        font-size: 1.75rem;
+    }
+    .form-group label {
+        font-size: 1rem;
+    }
+    .form-group input[type="text"], .form-group textarea {
+        font-size: 1.1rem;
+        padding: 0.85rem 1.1rem;
+    }
+    .btn-submit-thread {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    html {
+        font-size: 24px;
+    }
+    .container {
+        max-width: 3000px;
+    }
+    .forum-title {
+        font-size: 4rem;
+    }
+    .forum-icon {
+        font-size: 4.5rem;
+    }
+    .new-thread-btn {
+        padding: 1.5rem 3rem;
+        font-size: 1.3rem;
+    }
+    .bell-icon {
+        font-size: 2.75rem;
+    }
+    .user-avatar {
+        width: 70px;
+        height: 70px;
+    }
+    .post-title {
+        font-size: 1.5rem;
+    }
+    .post-text, .author-name, .post-timestamp, .engagement-item, .replies-count {
+        font-size: 1.15rem;
+    }
+    .author-avatar {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+    .trending-title {
+        font-size: 1.6rem;
+    }
+    .trending-item-title {
+        font-size: 1.25rem;
+    }
+    .trending-item-meta {
+        font-size: 0.9rem;
+    }
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+    .form-group label {
+        font-size: 1.15rem;
+    }
+    .form-group input[type="text"], .form-group textarea {
+        font-size: 1.25rem;
+        padding: 1rem 1.25rem;
+    }
+    .btn-submit-thread {
+        padding: 1.5rem 3rem;
+        font-size: 1.3rem;
     }
 }

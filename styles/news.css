@@ -34,6 +34,9 @@ body {
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -77,6 +80,8 @@ button {
     background-size: cover;
     background-position: center;
     margin-bottom: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .search-bar-modal {
@@ -226,6 +231,7 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
+    flex: 1 0 auto;
 }
 
 .content-grid {
@@ -618,13 +624,28 @@ button {
 }
 
 
-footer {
+footer.page-footer{
     background-color: var(--university-green);
     color: #B0B0B0;
     text-align: center;
     padding: 15px 1rem;
     font-size: clamp(0.8em, 2.5vw, 0.85em);
     border-top: 3px solid var(--university-gold);
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .page-footer .container p {
@@ -708,4 +729,277 @@ footer {
     color: #666;
     font-size: 0.8rem;
     line-height: 1.4;
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1800px;
+    }
+    .hero {
+        height: 20rem;
+    }
+    .hero-title {
+        font-size: 4rem;
+    }
+    .search-bar-modal {
+        max-width: 600px;
+    }
+    .search-bar-content input[type="text"] {
+        font-size: 1.1rem;
+    }
+    .search-bar-content button {
+        font-size: 1.75rem;
+    }
+    .search-bar-content .close-search-btn {
+        font-size: 2rem;
+    }
+    .search-btn-icon {
+        font-size: 1.75rem;
+    }
+    .main-container {
+        padding: 3rem 1.5rem;
+    }
+    .content-grid {
+        gap: 3rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .featured-article .article-image {
+        height: 20rem;
+    }
+    .article-content {
+        padding: 2rem;
+    }
+    .article-title {
+        font-size: 1.5rem;
+    }
+    .article-text {
+        font-size: 0.95rem;
+    }
+    .tag {
+        font-size: 0.95rem;
+        padding: 0.35rem 0.85rem;
+    }
+    .other-news-image {
+        height: 15rem;
+    }
+    .event-month {
+        font-size: 0.85rem;
+    }
+    .event-day {
+        font-size: 1.25rem;
+    }
+    .event-title {
+        font-size: 0.95rem;
+    }
+    .event-desc {
+        font-size: 0.8rem;
+    }
+    .see-more {
+        font-size: 0.95rem;
+    }
+    .latest-news-item .image-box {
+        width: 120px;
+    }
+    .latest-news-content {
+        padding: 1rem;
+    }
+    .latest-news-title {
+        font-size: 0.95rem;
+    }
+    .latest-news-text {
+        font-size: 0.8rem;
+    }
+    .other-news-grid > .article-link .article-title {
+        font-size: 1.25rem;
+    }
+    .other-news-grid > .article-link .article-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 2200px;
+    }
+    .hero {
+        height: 24rem;
+    }
+    .hero-title {
+        font-size: 5rem;
+    }
+    .search-bar-modal {
+        max-width: 700px;
+    }
+    .search-bar-content input[type="text"] {
+        font-size: 1.25rem;
+    }
+    .search-bar-content button {
+        font-size: 2rem;
+    }
+    .search-bar-content .close-search-btn {
+        font-size: 2.25rem;
+    }
+    .search-btn-icon {
+        font-size: 2rem;
+    }
+    .main-container {
+        padding: 4rem 1.5rem;
+    }
+    .content-grid {
+        gap: 4rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .featured-article .article-image {
+        height: 24rem;
+    }
+    .article-content {
+        padding: 2.5rem;
+    }
+    .article-title {
+        font-size: 1.8rem;
+    }
+    .article-text {
+        font-size: 1.05rem;
+    }
+    .tag {
+        font-size: 1.05rem;
+        padding: 0.4rem 1rem;
+    }
+    .other-news-image {
+        height: 18rem;
+    }
+    .event-month {
+        font-size: 0.95rem;
+    }
+    .event-day {
+        font-size: 1.4rem;
+    }
+    .event-title {
+        font-size: 1.05rem;
+    }
+    .event-desc {
+        font-size: 0.9rem;
+    }
+    .see-more {
+        font-size: 1.05rem;
+    }
+    .latest-news-item .image-box {
+        width: 140px;
+    }
+    .latest-news-content {
+        padding: 1.25rem;
+    }
+    .latest-news-title {
+        font-size: 1.05rem;
+    }
+    .latest-news-text {
+        font-size: 0.9rem;
+    }
+    .other-news-grid > .article-link .article-title {
+        font-size: 1.4rem;
+    }
+    .other-news-grid > .article-link .article-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    html {
+        font-size: 24px;
+    }
+    .container {
+        max-width: 3000px;
+    }
+    .hero {
+        height: 32rem;
+    }
+    .hero-title {
+        font-size: 7rem;
+    }
+    .search-bar-modal {
+        max-width: 900px;
+    }
+    .search-bar-content input[type="text"] {
+        font-size: 1.5rem;
+    }
+    .search-bar-content button {
+        font-size: 2.5rem;
+    }
+    .search-bar-content .close-search-btn {
+        font-size: 2.75rem;
+    }
+    .search-btn-icon {
+        font-size: 2.5rem;
+    }
+    .main-container {
+        padding: 6rem 1.5rem;
+    }
+    .content-grid {
+        gap: 5rem;
+    }
+    .section-title {
+        font-size: 2.8rem;
+    }
+    .featured-article .article-image {
+        height: 32rem;
+    }
+    .article-content {
+        padding: 3rem;
+    }
+    .article-title {
+        font-size: 2.2rem;
+    }
+    .article-text {
+        font-size: 1.2rem;
+    }
+    .tag {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.25rem;
+    }
+    .other-news-image {
+        height: 24rem;
+    }
+    .event-month {
+        font-size: 1.1rem;
+    }
+    .event-day {
+        font-size: 1.6rem;
+    }
+    .event-title {
+        font-size: 1.2rem;
+    }
+    .event-desc {
+        font-size: 1.05rem;
+    }
+    .see-more {
+        font-size: 1.2rem;
+    }
+    .latest-news-item .image-box {
+        width: 180px;
+    }
+    .latest-news-content {
+        padding: 1.5rem;
+    }
+    .latest-news-title {
+        font-size: 1.2rem;
+    }
+    .latest-news-text {
+        font-size: 1.05rem;
+    }
+    .other-news-grid > .article-link .article-title {
+        font-size: 1.75rem;
+    }
+    .other-news-grid > .article-link .article-text {
+        font-size: 1.15rem;
+    }
 }

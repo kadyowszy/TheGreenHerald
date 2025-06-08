@@ -322,8 +322,13 @@ button {
 }
 
 @keyframes marquee-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .l-header__info__inner a,
@@ -439,12 +444,25 @@ button {
 
 
 @media (min-width: 768px) {
-    .desktop-nav { display: flex; }
-    .mobile-menu-button { display: none; }
-    .mobile-menu-panel { display: none; }
+    .desktop-nav {
+        display: flex;
+    }
 
-    .hero-title { font-size: 3.75rem; }
-    .hero-subtitle { font-size: 1.25rem; }
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .mobile-menu-panel {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 3.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
 
     .date-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -458,19 +476,360 @@ button {
         display: flex;
     }
 
-    .l-header__info.bottom-banner { font-size: 1rem; }
+    .l-header__info.bottom-banner {
+        font-size: 1rem;
+    }
 
-    .content-section { padding: 5rem 1rem; }
-    .content-section h2 { font-size: 2.25rem; }
+    .content-section {
+        padding: 5rem 1rem;
+    }
+
+    .content-section h2 {
+        font-size: 2.25rem;
+    }
 }
 
 @media (min-width: 1200px) {
-    .hero-title { font-size: 4.5rem; }
+    .hero-title {
+        font-size: 4.5rem;
+    }
 
     .date-grid {
         grid-template-columns: repeat(7, 1fr);
         gap: 1rem;
     }
 
-    .content-section { padding: 6rem 1rem; }
+    .content-section {
+        padding: 6rem 1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1536px;
+    }
+
+    .logo-image {
+        height: 3.5rem;
+    }
+
+    .desktop-nav {
+        gap: 2rem;
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 8rem 1.5rem 5rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 5.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+        max-width: 50rem;
+        margin-bottom: 4rem;
+    }
+
+    .date-grid {
+        gap: 1.5rem;
+        max-width: 1500px;
+    }
+
+    .date-block {
+        padding: 1.2rem;
+        min-height: 120px;
+    }
+
+    .date-block .month {
+        font-size: 0.9rem;
+    }
+
+    .date-block .day {
+        font-size: 2.2rem;
+    }
+
+    .date-block .location {
+        font-size: 0.85rem;
+    }
+
+    .l-header__info.bottom-banner {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+
+    .l-header__info__inner a,
+    .l-header__info__inner span {
+        margin-right: 3em;
+    }
+
+    .content-section {
+        padding: 7rem 1.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .calendar-list {
+        max-width: 1000px;
+    }
+
+    .calendar-list li {
+        padding: 1.25rem 2rem;
+        margin-bottom: 1.25rem;
+        border-radius: 0.5rem;
+    }
+
+    .calendar-list .event-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .calendar-list .event-date {
+        font-size: 0.95em;
+        margin-bottom: 0.6rem;
+    }
+
+    .calendar-list .event-location {
+        font-size: 0.95em;
+        margin-bottom: 0.6rem;
+    }
+
+    .calendar-list .event-description {
+        font-size: 1em;
+        margin-top: 0.6rem;
+    }
+
+    .site-footer {
+        padding: 2rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 1920px;
+    }
+
+    .logo-image {
+        height: 4rem;
+    }
+
+    .desktop-nav {
+        gap: 2.5rem;
+        font-size: 1.15rem;
+    }
+
+    .hero-content {
+        padding: 10rem 2rem 6rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 6.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem;
+        max-width: 60rem;
+        margin-bottom: 5rem;
+    }
+
+    .date-grid {
+        gap: 1.8rem;
+        max-width: 1800px;
+    }
+
+    .date-block {
+        padding: 1.5rem;
+        min-height: 140px;
+    }
+
+    .date-block .month {
+        font-size: 1rem;
+    }
+
+    .date-block .day {
+        font-size: 2.5rem;
+    }
+
+    .date-block .location {
+        font-size: 0.95rem;
+    }
+
+    .l-header__info.bottom-banner {
+        padding: 1.25rem 0;
+        font-size: 1.25rem;
+    }
+
+    .l-header__info__inner a,
+    .l-header__info__inner span {
+        margin-right: 3.5em;
+    }
+
+    .content-section {
+        padding: 8rem 2rem;
+    }
+
+    .content-section h2 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .calendar-list {
+        max-width: 1200px;
+    }
+
+    .calendar-list li {
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0.625rem;
+    }
+
+    .calendar-list .event-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .calendar-list .event-date {
+        font-size: 1.1em;
+        margin-bottom: 0.7rem;
+    }
+
+    .calendar-list .event-location {
+        font-size: 1.1em;
+        margin-bottom: 0.7rem;
+    }
+
+    .calendar-list .event-description {
+        font-size: 1.15em;
+        margin-top: 0.7rem;
+    }
+
+    .site-footer {
+        padding: 2.5rem 2rem;
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    body {
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 2560px;
+    }
+
+    .logo-image {
+        height: 5.5rem;
+    }
+
+    .desktop-nav {
+        gap: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .hero-content {
+        padding: 12rem 3rem 8rem 3rem;
+    }
+
+    .hero-title {
+        font-size: 8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+        max-width: 75rem;
+        margin-bottom: 6rem;
+    }
+
+    .date-grid {
+        gap: 2.5rem;
+        max-width: 2400px;
+    }
+
+    .date-block {
+        padding: 2rem;
+        min-height: 180px;
+    }
+
+    .date-block .month {
+        font-size: 1.25rem;
+    }
+
+    .date-block .day {
+        font-size: 3.5rem;
+    }
+
+    .date-block .location {
+        font-size: 1.15rem;
+    }
+
+    .l-header__info.bottom-banner {
+        padding: 1.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .l-header__info__inner a,
+    .l-header__info__inner span {
+        margin-right: 4.5em;
+    }
+
+    .content-section {
+        padding: 10rem 3rem;
+    }
+
+    .content-section h2 {
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .calendar-list {
+        max-width: 1600px;
+    }
+
+    .calendar-list li {
+        padding: 2rem 3.5rem;
+        margin-bottom: 2rem;
+        border-radius: 0.75rem;
+    }
+
+    .calendar-list .event-title {
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .calendar-list .event-date {
+        font-size: 1.3em;
+        margin-bottom: 0.8rem;
+    }
+
+    .calendar-list .event-location {
+        font-size: 1.3em;
+        margin-bottom: 0.8rem;
+    }
+
+    .calendar-list .event-description {
+        font-size: 1.4em;
+        margin-top: 0.8rem;
+    }
+
+    .site-footer {
+        padding: 3.5rem 3rem;
+        font-size: 1.4rem;
+    }
 }

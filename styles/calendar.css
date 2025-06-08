@@ -6,21 +6,17 @@
     --text-light: #F8F9FA;
     --text-dark: #212529;
     --text-muted: #6c757d;
-
     --bg-light-section: rgb(241, 243, 245, 0.2);
     --bg-medium-section: rgb(233, 236, 239, 0.3);
     --overlay-start: rgba(0, 0, 0, 0);
     --overlay-end: rgb(10, 39, 19, 1);
     --marquee-bg: rgba(15, 48, 28, 0.8);
     --dark-bg: #0A2713;
-
     --featured-card-new-bg: #FAFEEF;
     --search-bar-bg: #1a2a20;
     --featured-title-line-color: rgba(248, 249, 250, 0.7);
-
     --calendar-grid-bg: #FFFFFF;
     --row-identifier-bg-default: var(--university-green);
-
     --calendar-day-header-default: var(--text-dark);
     --calendar-day-header-weekend: #FFA100;
     --calendar-date-default: var(--text-dark);
@@ -28,15 +24,12 @@
     --calendar-date-gold: var(--university-gold);
     --holiday-date-red: #FF0C00;
     --cvsu-event-color: #56D312;
-
     --neutral-dark-bg: #1A1A1A;
     --component-bg-dark: #1C261A;
-
     --highlight-red: #E74C3C;
     --highlight-orange: #F39C12;
     --border-color-light: #4A5540;
 }
-
 
 html {
     box-sizing: border-box;
@@ -89,7 +82,6 @@ button {
     padding-left: 1rem;
     padding-right: 1rem;
 }
-
 
 .page-header {
     background-color: var(--university-green);
@@ -216,7 +208,6 @@ button {
     color: var(--university-gold);
     opacity: 1;
 }
-
 
 main {
     padding: 32.5px;
@@ -360,18 +351,17 @@ main {
     border-radius: 4px;
 }
 
+.calendar td:first-child:hover {
+    background-color: var(--university-gold);
+    color: var(--text-light);
+}
+
 .calendar th,
 .calendar td {
     text-align: end;
     padding: 4px;
 }
 
-.calendar td:first-child:hover {
-    background-color: var(--university-gold);
-    color: var(--text-light);
-}
-
-.calendar th:last-child,
 .calendar td:last-child {
     border-right: none;
 }
@@ -505,7 +495,6 @@ main {
     display: none;
 }
 
-
 .sidebar {
     flex: 1 1 100%;
     order: 2;
@@ -571,7 +560,6 @@ main {
     text-align: left;
 }
 
-
 footer {
     background-color: var(--university-green);
     color: #B0B0B0;
@@ -579,8 +567,22 @@ footer {
     padding: 15px 1rem;
     font-size: clamp(0.8em, 2.5vw, 0.85em);
     border-top: 3px solid var(--university-gold);
+    width: 100%;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
 
 @media (min-width: 769px) {
     .page-header {
@@ -845,5 +847,233 @@ footer {
 
     .event-card {
         padding: 8px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1800px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .page-header {
+        padding: 1rem 3rem;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .desktop-nav {
+        gap: 2.8rem;
+    }
+
+    .desktop-nav a {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    .calendar-section h2 {
+        font-size: 3.2rem;
+    }
+
+    .calendar-section h2 .campus {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+    }
+
+    .month-year {
+        font-size: 2.5em;
+    }
+
+    .nav-arrows button {
+        font-size: 1.4em;
+        padding: 10px 15px;
+    }
+
+    .calendar {
+        font-size: 1.5rem;
+        border-spacing: 12px 6px;
+    }
+
+    .calendar th,
+    .calendar td {
+        padding: 6px;
+    }
+
+    .calendar th:first-child {
+        padding: 6px 12px;
+    }
+
+    .calendar td:first-child {
+        font-size: 1.7rem;
+    }
+
+    .calendar th {
+        font-size: 1em;
+    }
+
+    .calendar-row-identifier {
+        font-size: 1em;
+        padding: 8px 3px !important;
+        min-width: 30px;
+    }
+
+    .national-holidays h3 {
+        font-size: 1.6em;
+        margin-top: 70px;
+        margin-bottom: 12px;
+    }
+
+    .national-holidays ul li {
+        font-size: 1.15em;
+        margin-bottom: 10px;
+    }
+
+    .event-highlights h3 {
+        font-size: 1.5em;
+    }
+
+    .event-card img {
+        width: 90%;
+        height: 220px;
+    }
+
+    .event-card h4 {
+        font-size: 1.25em;
+    }
+
+    .event-card p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px 1rem;
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 2200px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .page-header {
+        padding: 1.2rem 4rem;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+    }
+
+    .desktop-nav {
+        gap: 3.5rem;
+    }
+
+    .desktop-nav a {
+        font-size: 1.25rem;
+    }
+
+    main {
+        padding: 50px;
+    }
+
+    .calendar-section h2 {
+        font-size: 4rem;
+    }
+
+    .calendar-section h2 .campus {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .month-year {
+        font-size: 3em;
+    }
+
+    .nav-arrows button {
+        font-size: 1.6em;
+        padding: 12px 18px;
+    }
+
+    .calendar {
+        font-size: 1.7rem;
+        border-spacing: 15px 8px;
+    }
+
+    .calendar th,
+    .calendar td {
+        padding: 8px;
+    }
+
+    .calendar th:first-child {
+        padding: 8px 15px;
+    }
+
+    .calendar td:first-child {
+        font-size: 2rem;
+    }
+
+    .calendar th {
+        font-size: 1.15em;
+    }
+
+    .calendar-row-identifier {
+        font-size: 1.15em;
+        padding: 10px 4px !important;
+        min-width: 35px;
+    }
+
+    .national-holidays h3 {
+        font-size: 1.8em;
+        margin-top: 80px;
+        margin-bottom: 15px;
+    }
+
+    .national-holidays ul li {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+
+    .event-highlights h3 {
+        font-size: 1.7em;
+    }
+
+    .event-card img {
+        width: 95%;
+        height: 250px;
+    }
+
+    .event-card h4 {
+        font-size: 1.4em;
+    }
+
+    .event-card p {
+        font-size: 1.15em;
+    }
+
+    footer {
+        padding: 25px 1rem;
+        font-size: 1.1em;
     }
 }

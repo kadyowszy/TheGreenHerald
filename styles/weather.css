@@ -403,6 +403,21 @@ footer {
     padding: 15px 1rem;
     font-size: clamp(0.8em, 2.5vw, 0.85em);
     border-top: 3px solid var(--university-gold);
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -469,5 +484,479 @@ footer {
     .sun-container {
         width: 140px;
         right: 100px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 1800px;
+    }
+
+    .page-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .logo a img {
+        width: 50px;
+        margin-right: 12px;
+    }
+
+    .desktop-nav {
+        gap: 2.8rem;
+    }
+
+    .desktop-nav a {
+        font-size: 1.1rem;
+    }
+
+    main.main-content {
+        padding: 3rem;
+    }
+
+    .content-container {
+        max-width: 1600px;
+        padding: 2.5rem;
+        border-radius: 18px;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: 420px 1fr;
+        gap: 3.5rem;
+    }
+
+    .forecast-card {
+        padding: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .forecast-header {
+        padding-bottom: 1.2rem;
+    }
+
+    .forecast-title {
+        font-size: 1.4rem;
+    }
+
+    .forecast-today {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .current-weather-brief {
+        gap: 4.5rem;
+    }
+
+    .current-temp {
+        font-size: 6rem;
+    }
+
+    .feels-like-temp {
+        font-size: 1.1rem;
+    }
+
+    .forecast-list {
+        gap: 0.75rem;
+    }
+
+    .forecast-item {
+        padding: 0.75rem 0;
+    }
+
+    .forecast-item .temp {
+        font-size: 2.2rem;
+    }
+
+    .date-info .day {
+        font-size: 1rem;
+    }
+
+    .date-info .date {
+        font-size: 0.95rem;
+    }
+
+    .main-weather {
+        gap: 4rem;
+    }
+
+    .weather-title-row {
+        gap: 2rem;
+    }
+
+    .weather-title h1 {
+        font-size: 4rem;
+    }
+
+    .hot-text {
+        font-size: 4.5rem;
+    }
+
+    .campus-text {
+        font-size: 1.3rem;
+    }
+
+    .sun-container {
+        width: 160px;
+    }
+
+    .conditions-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .conditions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+
+    .condition-item {
+        border-radius: 10px;
+        padding: 2rem 1.25rem;
+    }
+
+    .condition-tape {
+        top: -12px;
+        width: 30px;
+    }
+
+    .condition-value {
+        font-size: 8rem;
+    }
+
+    .condition-value .percent {
+        font-size: 0.3em;
+    }
+
+    .condition-label {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        padding: 20px 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 2200px;
+    }
+
+    .page-header {
+        padding: 1.2rem 1.8rem;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+    }
+
+    .logo a img {
+        width: 60px;
+        margin-right: 15px;
+    }
+
+    .desktop-nav {
+        gap: 3.5rem;
+    }
+
+    .desktop-nav a {
+        font-size: 1.3rem;
+    }
+
+    main.main-content {
+        padding: 4rem;
+    }
+
+    .content-container {
+        max-width: 2000px;
+        padding: 3.5rem;
+        border-radius: 24px;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: 500px 1fr;
+        gap: 4.5rem;
+    }
+
+    .forecast-card {
+        padding: 2.5rem;
+        padding-bottom: 6rem;
+    }
+
+    .forecast-header {
+        padding-bottom: 1.5rem;
+    }
+
+    .forecast-title {
+        font-size: 1.7rem;
+    }
+
+    .forecast-today {
+        font-size: 1.3rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .current-weather-brief {
+        gap: 5.5rem;
+    }
+
+    .current-temp {
+        font-size: 7.5rem;
+    }
+
+    .feels-like-temp {
+        font-size: 1.3rem;
+    }
+
+    .forecast-list {
+        gap: 1rem;
+    }
+
+    .forecast-item {
+        padding: 1rem 0;
+    }
+
+    .forecast-item .temp {
+        font-size: 2.8rem;
+    }
+
+    .date-info .day {
+        font-size: 1.2rem;
+    }
+
+    .date-info .date {
+        font-size: 1.1rem;
+    }
+
+    .main-weather {
+        gap: 5rem;
+    }
+
+    .weather-title-row {
+        gap: 2.5rem;
+    }
+
+    .weather-title h1 {
+        font-size: 5rem;
+    }
+
+    .hot-text {
+        font-size: 5.5rem;
+    }
+
+    .campus-text {
+        font-size: 1.6rem;
+    }
+
+    .sun-container {
+        width: 200px;
+    }
+
+    .conditions-title {
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .conditions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .condition-item {
+        border-radius: 12px;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .condition-tape {
+        top: -15px;
+        width: 35px;
+    }
+
+    .condition-value {
+        font-size: 9.5rem;
+    }
+
+    .condition-value .percent {
+        font-size: 0.3em;
+    }
+
+    .condition-label {
+        font-size: 1.4rem;
+        margin-top: 0.75rem;
+    }
+
+    footer {
+        padding: 25px 1.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 3840px) {
+    html {
+        font-size: 32px;
+    }
+
+    .container {
+        max-width: 3000px;
+    }
+
+    .page-header {
+        padding: 1.5rem 2.2rem;
+    }
+
+    .logo a {
+        font-size: 2.4rem;
+    }
+
+    .logo a img {
+        width: 80px;
+        margin-right: 20px;
+    }
+
+    .desktop-nav {
+        gap: 4.5rem;
+    }
+
+    .desktop-nav a {
+        font-size: 1.7rem;
+    }
+
+    main.main-content {
+        padding: 6rem;
+    }
+
+    .content-container {
+        max-width: 2800px;
+        padding: 4.5rem;
+        border-radius: 32px;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: 650px 1fr;
+        gap: 6rem;
+    }
+
+    .forecast-card {
+        padding: 3.5rem;
+        padding-bottom: 8rem;
+    }
+
+    .forecast-header {
+        padding-bottom: 2rem;
+    }
+
+    .forecast-title {
+        font-size: 2.2rem;
+    }
+
+    .forecast-today {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .current-weather-brief {
+        gap: 7rem;
+    }
+
+    .current-temp {
+        font-size: 10rem;
+    }
+
+    .feels-like-temp {
+        font-size: 1.7rem;
+    }
+
+    .forecast-list {
+        gap: 1.5rem;
+    }
+
+    .forecast-item {
+        padding: 1.25rem 0;
+    }
+
+    .forecast-item .temp {
+        font-size: 3.8rem;
+    }
+
+    .date-info .day {
+        font-size: 1.5rem;
+    }
+
+    .date-info .date {
+        font-size: 1.4rem;
+    }
+
+    .main-weather {
+        gap: 7rem;
+    }
+
+    .weather-title-row {
+        gap: 3.5rem;
+    }
+
+    .weather-title h1 {
+        font-size: 6.5rem;
+    }
+
+    .hot-text {
+        font-size: 7rem;
+    }
+
+    .campus-text {
+        font-size: 2rem;
+    }
+
+    .sun-container {
+        width: 250px;
+    }
+
+    .conditions-title {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .conditions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3.5rem;
+    }
+
+    .condition-item {
+        border-radius: 16px;
+        padding: 3.5rem 2rem;
+    }
+
+    .condition-tape {
+        top: -20px;
+        width: 45px;
+    }
+
+    .condition-value {
+        font-size: 12rem;
+    }
+
+    .condition-value .percent {
+        font-size: 0.3em;
+    }
+
+    .condition-label {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    footer {
+        padding: 30px 2.2rem;
+        font-size: 1.5rem;
     }
 }

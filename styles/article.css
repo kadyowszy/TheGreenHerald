@@ -125,7 +125,6 @@
     text-align: center;
 }
 
-
 @media (max-width: 768px) {
     .article-page-title {
         font-size: 1.8rem;
@@ -143,5 +142,105 @@
 
     .article-full-body {
         font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    #full-article-content {
+        max-width: 1000px;
+        padding: 3rem 4rem;
+    }
+
+    .article-page-title {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .article-meta {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .article-image-container {
+        margin-bottom: 2.5rem;
+    }
+
+    .article-full-body {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    .article-full-body p {
+        margin-bottom: 1.5em;
+    }
+
+    .article-full-body ul,
+    .article-full-body ol {
+        margin-bottom: 1.5em;
+        padding-left: 2.5em;
+    }
+
+    .article-tags-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        font-size: 1.05rem;
+    }
+
+    #article-tags .tag-item {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+        margin-right: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    #full-article-content {
+        max-width: 1200px;
+        padding: 4rem 5rem;
+    }
+
+    .article-page-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .article-meta {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .article-image-container {
+        margin-bottom: 3rem;
+    }
+
+    .article-full-body {
+        font-size: 1.3rem;
+        line-height: 1.9;
+    }
+
+    .article-full-body p {
+        margin-bottom: 1.75em;
+    }
+
+    .article-full-body ul,
+    .article-full-body ol {
+        margin-bottom: 1.75em;
+        padding-left: 3em;
+    }
+
+    .article-tags-section {
+        margin-top: 4rem;
+        padding-top: 2.5rem;
+        font-size: 1.15rem;
+    }
+
+    #article-tags .tag-item {
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
     }
 }
