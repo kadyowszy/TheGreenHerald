@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const authorName = comment.author || 'Anonymous';
 
         return `
-            <div class="comment-reddit">
-                <div class="comment-meta-reddit">
-                    <a href="#" class="comment-author-name-reddit">${authorName}</a>
-                    <span class="comment-timestamp-reddit">• ${commentTimestamp}</span>
+            <div class="comment-item">
+                <div class="comment-meta">
+                    <a href="#" class="comment-author-name">${authorName}</a>
+                    <span class="comment-timestamp">• ${commentTimestamp}</span>
                 </div>
-                <div class="comment-body-reddit">
+                <div class="comment-body">
                     <p>${comment.text ? comment.text.replace(/\n/g, '<br>') : ''}</p>
                 </div>
-                <div class="comment-actions-reddit">
+                <div class="comment-actions">
                     <button class="comment-action-btn" aria-label="Like"><i class="fas fa-thumbs-up"></i></button>
                     <span class="comment-votes">0</span>
                     <button class="comment-action-btn" aria-label="Dislike"><i class="fas fa-thumbs-down"></i></button>
@@ -118,18 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Comment posted! (Note: This comment is only visible in your current session and will not be saved permanently.)");
     }
 
-    function renderCommentForm() {
+    function renderCommentForm(postData) { 
         if (!commentFormContainer) return;
-        commentFormContainer.innerHTML = `
-            <form class="comment-form" id="comment-form">
-                <label for="new-comment-text">Add a comment:</label>
-                <textarea id="new-comment-text" name="new-comment-text" rows="3" placeholder="What are your thoughts?" required></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-        `;
-        const form = document.getElementById('comment-form');
-        if (form) {
-            form.addEventListener('submit', handleAddComment);
+
+        if (postData && postData.isLocked) {
+            commentFormContainer.innerHTML = `
+                <div class="comment-form-locked">
+                    <p>Comments are closed for this post.</p>
+                </div>
+            `;
+        } else {
+            commentFormContainer.innerHTML = `
+                <form class="comment-form" id="comment-form">
+                    <label for="new-comment-text">Add a comment:</label>
+                    <textarea id="new-comment-text" name="new-comment-text" rows="3" placeholder="What are your thoughts?" required></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            `;
+            const form = document.getElementById('comment-form');
+            if (form) {
+                form.addEventListener('submit', handleAddComment);
+            }
         }
     }
 
@@ -138,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Element with ID 'post-detail-wrapper' not found.");
             if (loadingMessage) loadingMessage.style.display = 'none';
             if (errorMessage) {
-                 errorMessage.style.display = 'block';
-                 errorMessage.textContent = "Page structure error.";
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = "Page structure error.";
             }
             return;
         }
@@ -200,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const voteCount = postData.likes !== undefined ? postData.likes : (postData.votes !== undefined ? postData.votes : 0);
 
         const postHTML = `
-            <article class="reddit-post-card">
+            <article class="forum-post-card">
                 <div class="vote-section">
                     <button class="vote-btn upvote" aria-label="Like"><i class="fas fa-thumbs-up"></i></button>
                     <span class="vote-count">${voteCount}</span>
@@ -213,16 +222,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             Posted by 
                             <a href="#" class="author-link">${postData.author || 'Anonymous'}</a>
                         </span>
-                        <span class="post-timestamp-reddit">• ${formattedTimestamp}</span>
+                        <span class="post-timestamp">• ${formattedTimestamp}</span>
                     </div>
-                    <h2 class="post-title-reddit">${postData.title || 'Untitled Post'}</h2>
-                    ${postData.imageUrl ? `<img src="${postData.imageUrl}" alt="${postData.title || 'Post image'}" class="post-image-reddit">` : ''}
+                    <h2 class="post-title">${postData.title || 'Untitled Post'}</h2>
+                    ${postData.imageUrl ? `<img src="${postData.imageUrl}" alt="${postData.title || 'Post image'}" class="post-image">` : ''}
                     <hr>
-                    <div class="post-content-reddit">
+                    <div class="post-content">
                         ${postData.content ? postData.content.replace(/\n/g, '<br>') : 'No content.'}
                     </div>
-                    ${tagsHTML ? `<div class="post-badges-reddit">${tagsHTML}</div>` : ''}
-                    <div class="post-actions-reddit">
+                    ${tagsHTML ? `<div class="post-badges">${tagsHTML}</div>` : ''}
+                    <div class="post-actions">
                         <button class="action-btn share-btn">
                             <i class="fas fa-share"></i>
                             <span>Share</span>
@@ -241,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         postDetailWrapper.innerHTML = postHTML;
         
-        renderCommentForm();
+        renderCommentForm(postData);
 
         if (commentsListContainer) {
             if (postData.comments && postData.comments.length > 0) {
@@ -277,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMessage.style.display = 'block';
             errorMessage.textContent = 'No post ID provided in URL.';
         }
-         if (postDetailWrapper) postDetailWrapper.innerHTML = '';
+            if (postDetailWrapper) postDetailWrapper.innerHTML = '';
     }
 
     const menuBtn = document.getElementById('menu-btn');
